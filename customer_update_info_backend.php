@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once 'dbconnect.php';
 
 $username = $_SESSION['username'];
@@ -9,21 +9,22 @@ $password1 = $_POST["password1"];
 $password = md5($password);
 $password1 = md5($password1);
 
-$query = "UPDATE customer SET password=$password 
-		WHERE customer_id='$username' AND $password=$password1";
-
-$result = mysqli_query($con, $query);
-$row=mysqli_fetch_array($result);
-
-$numResults = mysqli_num_rows($result);
-
 function getAddress() {
     $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
     return $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
+if($password == $password1){
+$query = "UPDATE customer SET password='$password' 
+		WHERE customer_id='$username' AND '$password'='$password1'";
 
-if($numResults == 1)
-{
+$result = mysqli_query($con, $query);
+// $row=mysqli_fetch_array($result);
+
+// $numResults = mysqli_num_rows($result);
+
+
+// if($numResults == 1)
+// {
 	$url= getAddress();
 	$scheme = parse_url($url, PHP_URL_SCHEME);
 	$user = parse_url($url, PHP_URL_USER);
@@ -34,7 +35,7 @@ if($numResults == 1)
 }
 else
 {
-	echo "<br><br><br><center><h1>Invalid credentials!</h1></center>";
+	echo "<br><br><br><center><h1>Passwords don't match!</h1></center>";
 }
 
 ?>
