@@ -17,10 +17,20 @@ $row=mysqli_fetch_array($result);
 
 $numResults = mysqli_num_rows($result);
 
+function getAddress() {
+    $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
+    return $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+}
+
 if($numResults == 1)
 {
-	// echo "<br><br><br><center><h1>Hi ".$row["name"]."!</h1></center>";
-	header("Location: http://localhost:8080/MediKart/customer_home.php");
+	$url= getAddress();
+	$scheme = parse_url($url, PHP_URL_SCHEME);
+	$user = parse_url($url, PHP_URL_USER);
+	$pass = parse_url($url, PHP_URL_PASS);
+	$host = parse_url($url, PHP_URL_HOST);
+	$port = parse_url($url, PHP_URL_PORT);
+	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/customer_home.html");
 }
 else
 {
