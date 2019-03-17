@@ -13,9 +13,12 @@ $name = $_POST["name"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 $address = $_POST["address"];
+$phoneno1 = $_POST["phoneno1"];
+$phoneno2 = $_POST["phoneno2"];
 $password = md5($password);
 // $error_css = "";
 $query = "SELECT * FROM customer WHERE customer_id='$username'";
+
 $result = mysqli_query($con, $query);
 $numResults = mysqli_num_rows($result);
 
@@ -25,16 +28,18 @@ if($numResults == 1)
 }
 else
 {
-	if(empty($name) || empty($username) || empty($password) || empty($address)) 
+	$query = "INSERT INTO customer VALUES ('$username', '$password', '$name', '$address')";
+	$query1 = "INSERT INTO c_phone_no VALUES ('$username','$phoneno1')";
+	
+	mysqli_query($con, $query);
+	mysqli_query($con,$query1);
+	if(!empty($phoneno2))
 	{
-		$error_css='border: 2px solid red';
+		$query2 = "INSERT INTO c_phone_no VALUES ('$username','$phoneno2')";
+		mysqli_query($con,$query2);
 	}
-	else
-	{
-		$query = "INSERT INTO customer VALUES ('$username', '$password', '$name', '$address')";
-		mysqli_query($con, $query);
-		echo "<br><br><br><center><h1>Successfully registered $name ! </h1></center>";
-	}
+
+	echo "<br><br><br><center><h1>Successfully registered $name ! </h1></center>";
 }
 
 ?>
