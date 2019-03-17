@@ -5,19 +5,26 @@ require_once 'dbconnect.php';
 $username = $_SESSION['username'];
 $password = $_POST["password"];
 $password1 = $_POST["password1"];
-
-$password = md5($password);
-$password1 = md5($password1);
+$name = $_POST["name"];
+$address = $_POST["address"];
 
 function getAddress() {
     $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
     return $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 if($password == $password1){
-$query = "UPDATE customer SET password='$password' 
-		WHERE customer_id='$username' AND '$password'='$password1'";
+	if($password != ''){
+		$password = md5($password);
+		$password1 = md5($password1);
+		$query = "UPDATE customer SET password='$password', name = '$name', address = '$address'
+				WHERE customer_id='$username' AND '$password'='$password1'";
+	}
+	else {
+		$query = "UPDATE customer SET name = '$name', address = '$address'
+				WHERE customer_id = '$username'";
+	}
+	$result = mysqli_query($con, $query);
 
-$result = mysqli_query($con, $query);
 
 	$url= getAddress();
 	$scheme = parse_url($url, PHP_URL_SCHEME);
