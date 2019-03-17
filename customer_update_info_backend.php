@@ -18,13 +18,7 @@ $query = "UPDATE customer SET password='$password'
 		WHERE customer_id='$username' AND '$password'='$password1'";
 
 $result = mysqli_query($con, $query);
-// $row=mysqli_fetch_array($result);
 
-// $numResults = mysqli_num_rows($result);
-
-
-// if($numResults == 1)
-// {
 	$url= getAddress();
 	$scheme = parse_url($url, PHP_URL_SCHEME);
 	$user = parse_url($url, PHP_URL_USER);
