@@ -13,7 +13,7 @@
 		$query_result = mysqli_query($con,$query);
 	?>
 	<table>
-		<form action="" method="POST">
+		<form action="confirm_booking.php" method="POST" id='view_medicine'>
 		<tr>
 			<th> ID </th>
 			<th> Name </th>
@@ -30,10 +30,12 @@
 				echo "<td>".$row['quantity']."</td>";
 				echo "<td><input type='checkbox' name='addtocart[]' value='$row[id]'></td>";
 				echo "<td><input type='number' name='orderquantity".$row['id']."'></td>";
+				echo "</tr>";
 			}
 		?>
-		<input type="submit" name="Place Order" value = "Place Order" align="bottom">
+		<!-- <input type="submit" name="Place Order" value="Place Order"> -->
 		</form>
 	</table>
+	<button type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
 </body>
 </html>
