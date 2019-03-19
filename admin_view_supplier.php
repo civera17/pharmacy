@@ -17,6 +17,13 @@ if( !( $selectRes = mysqli_query($con, $selectSQL ) ) )
 }
 else{
 ?>
+<!DOCTYPE html>
+<head>
+	<title>View Medicines</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<center>
 <h3>SUPPLIERS</h3>
 <table border="2">
 	<thead>
@@ -44,6 +51,8 @@ else{
 <br><br>
 <button type = "button" value="add_supplier">Add supplier</button>
 <button type="button" value="del_supplier">Remove Supplier</button>
+</center>
+</body>
 <?php
  	}
 ?>

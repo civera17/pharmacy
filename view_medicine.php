@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Medicine Catalog</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
 	<?php
@@ -12,7 +13,7 @@
 					GROUP BY medicine.medicine_id, medicine.name, medicine.cost";
 		$query_result = mysqli_query($con,$query);
 	?>
-	<table>
+	<table align="center" style="margin-top: 10%;" cellpadding="10" border="2">
 		<form action="confirm_booking.php" method="POST" id='view_medicine'>
 		<tr>
 			<th> ID </th>
@@ -20,6 +21,7 @@
 			<th> Cost </th>
 			<th> Available quantity </th>
 			<th> Add to cart </th>
+			<th> Choose quantity </th>
 		</tr>
 		<?php
 			while ($row = mysqli_fetch_array($query_result)){
@@ -36,6 +38,6 @@
 		<!-- <input type="submit" name="Place Order" value="Place Order"> -->
 		</form>
 	</table>
-	<button type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
+	<button type='submit' style="position: absolute; left: 50%; top: 50%;" form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
 </body>
 </html>

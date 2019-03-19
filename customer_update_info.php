@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Update Info</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
+<center>
 <h3>Update information</h3>	
 <form action= "customer_update_info_backend.php" method="POST">
 	<?php
@@ -20,5 +22,6 @@
 	echo '<button type="submit">Edit</button>';
 	?>
 </form>
+</center>
 </body>
 </html>
