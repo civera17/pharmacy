@@ -2,8 +2,11 @@
 <html>
 <head>
 	<title>Confirm booking</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
+<center>
+<h3> Confirm Booking </h3>
 	<?php
 		$chosen = $_POST['addtocart'];
 		require_once 'dbconnect.php';
@@ -11,7 +14,7 @@
 			echo "<h1> Nothing chosen! </h1>";
 		}
 		else{
-			echo "<table>";
+			echo "<table border='2'>";
 			echo "<tr>";
 			echo "<th> ID </th>";
 			echo "<th> Name </th>";
@@ -39,5 +42,6 @@
 
 		}
 	?>
+</center>
 </body>
 </html>

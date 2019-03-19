@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
+	<center>
 	<?php
 		require_once 'dbconnect.php';
 		$query = "SELECT medicine.medicine_id as id, medicine.name as name,	medicine.cost as cost, sum(inventory.quantity) as quantity
@@ -13,7 +14,8 @@
 					GROUP BY medicine.medicine_id, medicine.name, medicine.cost";
 		$query_result = mysqli_query($con,$query);
 	?>
-	<table align="center" style="margin-top: 10%;" cellpadding="10" border="2">
+	<h3> Medicines </h3>
+	<table border="2">
 		<form action="confirm_booking.php" method="POST" id='view_medicine'>
 		<tr>
 			<th> ID </th>
@@ -38,6 +40,7 @@
 		<!-- <input type="submit" name="Place Order" value="Place Order"> -->
 		</form>
 	</table>
-	<button type='submit' style="position: absolute; left: 50%; top: 50%;" form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
+	<button type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
+	</center>
 </body>
 </html>
