@@ -19,12 +19,15 @@ if($password == $password1){
 		$query = "UPDATE customer SET password='$password', name = '$name', address = '$address'
 				WHERE customer_id='$username' AND '$password'='$password1'";
 	}
-	else {
-		$query = "UPDATE customer SET name = '$name', address = '$address'
-				WHERE customer_id = '$username'";
+	else if($name!='')
+	{
+		$query = "UPDATE customer SET name = '$name' WHERE customer_id = '$username'";
+	}
+	else if($address!='')
+	{
+		$query = "UPDATE customer SET address = '$address' WHERE customer_id = '$username'";
 	}
 	$result = mysqli_query($con, $query);
-
 
 	$url= getAddress();
 	$scheme = parse_url($url, PHP_URL_SCHEME);
