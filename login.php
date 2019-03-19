@@ -17,7 +17,6 @@
 <body>
 <center>
 	
-<h3>Login</h3>
 <!-- <form action="login-backend.php" method="POST">
 	Username: <input name="username" placeholder = "Username">
 	<br>
@@ -41,10 +40,21 @@
 						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
+					<br>
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Sign in
 						</button>
+					</div>
+					<br>
+					<div class="flex-col-c p-t-170 p-b-40">
+						<span class="txt1 p-b-9">
+							Don’t have an account?
+						</span>
+
+						<a href="signup.php" class="txt3">
+							Sign up now
+						</a>
 					</div>
 				</form>
 			</div>
