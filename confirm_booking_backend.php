@@ -1,4 +1,9 @@
 <?php
+	function getAddress() {
+	    $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
+	    return $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+	}
+
 	session_start();
 	require_once 'dbconnect.php';
 	$chosen = $_POST['data'];
@@ -28,7 +33,6 @@
 	$curr_date = date('y/m/d',time());
 	$insert_query = "INSERT INTO orders VALUES ('$order_id','$username','$agent_id','$curr_date','$total_cost')";
 	mysqli_query($con,$insert_query);
-	echo "<h3> Order inserted! </h3>";
 	foreach($chosen as $chosen_val)
 	{
 		$med_quant = $_POST['orderquantity'.$chosen_val];
@@ -56,5 +60,9 @@
 			}
 		}
 	}
-
+	echo "<script type='text/javascript'>";
+	echo "alert('Order placed!'); ";
+	echo "window.location.href = 'customer_home.html';";
+	echo "</script>";
+	
 ?>	
