@@ -8,12 +8,13 @@
 <center>
 <h3> Confirm Booking </h3>
 	<?php
-		$chosen = $_POST['addtocart'];
 		require_once 'dbconnect.php';
 		if(empty($_POST['addtocart'])){
 			echo "<h1> Nothing chosen! </h1>";
+			echo "<script> alert('Nothing chosen!'); </script>";
 		}
 		else{
+			$chosen = $_POST['addtocart'];
 			echo "<table border='2'>";
 			echo "<tr>";
 			echo "<th> ID </th>";
@@ -21,11 +22,9 @@
 			echo "<th> Quantity chosen </th>";
 			echo "<th> Cost </th>";
 			echo "</tr>";
-			// echo "<form action='confirm_booking_backend.php' method='POST'>";
 			$N = count($chosen);
 			$total_cost = 0;
 			for($i=0;$i<$N;$i++){
-				// echo "<p> chosen $chosen[$i] of quantity ".$_POST['orderquantity'.$chosen[$i]]."</p>";	
 				$query = "SELECT medicine_id,name,cost from medicine where medicine_id = ".$chosen[$i];
 				$query_result = mysqli_query($con,$query);
 				$row = mysqli_fetch_array($query_result);
@@ -39,7 +38,14 @@
 			}
 			echo "</table>";
 			echo "<p> total bill amount = ".$total_cost."<p>";
-
+			echo "<form action = 'confirm_booking_backend.php' method = 'POST'>";
+			foreach($chosen as $chosen_val)
+			{
+				echo "<input type='hidden' name='data[]' value='".$chosen_val."'>";
+				echo "<input type='hidden' name='orderquantity".$chosen_val."' value='".$_POST['orderquantity'.$chosen_val]."'>";
+			}
+			echo "<input type='hidden' name='bill_amount' value='".$total_cost."'>";
+			echo "<input type='submit' name='Confirm Booking'>";
 		}
 	?>
 </center>

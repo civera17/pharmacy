@@ -32,12 +32,12 @@
 				echo "<td>".$row['name']."</td>";
 				echo "<td>".$row['cost']."</td>";
 				echo "<td>".$row['quantity']."</td>";
+				$row_quant = $row['quantity'];
 				echo "<td><input type='checkbox' name='addtocart[]' value='$row[id]'></td>";
-				echo "<td><input type='number' name='orderquantity".$row['id']."'></td>";
+				echo "<td><input type='number' name='orderquantity".$row['id']."' max='$row_quant'></td>";
 				echo "</tr>";
 			}
 		?>
-		<!-- <input type="submit" name="Place Order" value="Place Order"> -->
 		</form>
 	</table>
 	<button type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
