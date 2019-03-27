@@ -52,13 +52,14 @@ else if($identifier==1)
 	{
 		$query = "UPDATE medicine SET cost='$cost' WHERE medicine_id='$medicine_id'";
 		$result = mysqli_query($con, $query);
+		echo 'here';
 	}
 	// $query = "UPDATE medicine SET name='$name' and max_count='$max_count' and min_count='$min_count' 
 	// 			and cost='$cost'
 	// 		  WHERE medicine_id='$medicine_id'";
 	// $result = mysqli_query($con, $query);
 
-	printf(mysqli_error());
+	printf(mysqli_error($con));
 
 	$scheme = parse_url($url, PHP_URL_SCHEME);
 	$user = parse_url($url, PHP_URL_USER);
