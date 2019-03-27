@@ -8,12 +8,13 @@
 <center>
 <h3> Confirm Booking </h3>
 	<?php
-		$chosen = $_POST['addtocart'];
 		require_once 'dbconnect.php';
 		if(empty($_POST['addtocart'])){
 			echo "<h1> Nothing chosen! </h1>";
+			echo "<script> alert('Nothing chosen!'); </script>";
 		}
 		else{
+			$chosen = $_POST['addtocart'];
 			echo "<table border='2'>";
 			echo "<tr>";
 			echo "<th> ID </th>";

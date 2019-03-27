@@ -38,7 +38,6 @@
 				echo "</tr>";
 			}
 		?>
-		<!-- <input type="submit" name="Place Order" value="Place Order"> -->
 		</form>
 	</table>
 	<button type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
