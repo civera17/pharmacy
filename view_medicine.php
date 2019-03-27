@@ -32,8 +32,9 @@
 				echo "<td>".$row['name']."</td>";
 				echo "<td>".$row['cost']."</td>";
 				echo "<td>".$row['quantity']."</td>";
+				$row_quant = $row['quantity'];
 				echo "<td><input type='checkbox' name='addtocart[]' value='$row[id]'></td>";
-				echo "<td><input type='number' name='orderquantity".$row['id']."'></td>";
+				echo "<td><input type='number' name='orderquantity".$row['id']."' max='$row_quant'></td>";
 				echo "</tr>";
 			}
 		?>
