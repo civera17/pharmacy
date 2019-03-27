@@ -31,36 +31,27 @@
 	echo "<h3> Order inserted! </h3>";
 	foreach($chosen as $chosen_val)
 	{
-		printf($chosen_val);
-		echo "<br>";	
-		printf('orderquantity'.$chosen_val);
-		echo "<br>";	
 		$med_quant = $_POST['orderquantity'.$chosen_val];
-		printf($med_quant."\n");
-		echo "<br>";	
 		$insert_query = "INSERT INTO contains VALUES('$order_id','$chosen_val','$med_quant')";
 		mysqli_query($con,$insert_query);
-		// printf(mysqli_error($con));
-		echo "<br>";	
-		printf("Inserted ".$chosen_val."\n");
-		echo "<br>";
 		$done = 0;
 		$inv_query = "SELECT medicine_id,quantity,inventory_id FROM inventory WHERE medicine_id = '$chosen_val' ORDER BY expiry_date";
 		$result = mysqli_query($con,$inv_query);
 		while($row = mysqli_fetch_array($result)){
+			$row_id = $row['inventory_id'];
 			if($row['quantity'] > $med_quant){
-				$update_query = "UPDATE inventory SET quantity = quantity - '$med_quant' WHERE inventory_id = $row['inventory_id']";
+				$update_query = "UPDATE inventory SET quantity = quantity - '$med_quant' WHERE inventory_id = '$row_id'";
 				mysqli_query($con,$update_query);
 				break;
 			}
 			else if($row['quantity'] == $med_quant){
-				$delete_query = "DELETE FROM inventory WHERE inventory_id = $row['inventory_id']";
+				$delete_query = "DELETE FROM inventory WHERE inventory_id = $row_id";
 				mysqli_query($con,$delete_query);
 				break;
 			}
 			else{
 				$med_quant = $med_quant - $row['quantity'];
-				$delete_query = "DELETE FROM inventory WHERE inventory_id = $row['inventory_id']";
+				$delete_query = "DELETE FROM inventory WHERE inventory_id = $row_id";
 				mysqli_query($con,$delete_query);
 			}
 		}
