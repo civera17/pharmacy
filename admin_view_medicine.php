@@ -54,10 +54,27 @@ else{
 	      	}
 	      	else
 	      	{
-	        	while( $row = mysqli_fetch_assoc( $selectRes ) ){
+	        	while( $row = mysqli_fetch_assoc( $selectRes ) )
+            {
 	          	echo "<tr><td>{$row['medicine_id']}</td><td>{$row['name']}</td><td>{$row['max_count']}</td><td>{$row['min_count']}</td><td>{$row['cost']}</td>";
-			    echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\"><button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td>";
-		    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><form action=\"admin_view_medicine_delrow.php\" method=\"get\"><input type='hidden' name='medicine_id' value='".$row['medicine_id']."'>
+			    
+          echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\">
+          <form action=\"admin_edit_medicine.php\" method=\"get\">
+          <input type='hidden' name='identifier' value='1'>
+          <input type='hidden' name='medicine_id' value='".$row['medicine_id']."'>
+          <input type='hidden' name='name' value='".$row['name']."'>
+          <input type='hidden' name='max_count' value='".$row['max_count']."'>
+          <input type='hidden' name='min_count' value='".$row['min_count']."'>
+          <input type='hidden' name='cost' value='".$row['cost']."'>
+
+          <button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" ><span class=\"glyphicon glyphicon-pencil\"></span>
+          </button>
+          </form>
+          </p></td>";
+		    	
+          echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><form action=\"admin_view_medicine_backend.php\" method=\"get\">
+          <input type='hidden' name='identifier' value='0'>
+          <input type='hidden' name='medicine_id' value='".$row['medicine_id']."'>
           <button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\" ><span class=\"glyphicon glyphicon-trash\"></span>
           </button>
           </form>
@@ -83,7 +100,8 @@ else{
 </ul>
 </div>
 
-<button type="button" name="Add medicine">Add medicine</button>
+<button onclick = "location.href='admin_add_medicine.php'" type="button" name="Add medicine">Add medicine</button>
+
 
 <!-- <button type = "button" value="add_medicine">Add medicine</button>
 <button type="button" value="del_medicine">Remove medicine</button> -->
