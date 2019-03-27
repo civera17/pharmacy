@@ -12,22 +12,27 @@ require_once 'dbconnect.php';
 $name = $_POST["name"];
 $username = $_POST["username"];
 $password = $_POST["password"];
+$conf_password = $_POST["conf_password"];
 $address = $_POST["address"];
 $phoneno1 = $_POST["phoneno1"];
 $phoneno2 = $_POST["phoneno2"];
-$password = md5($password);
+
 // $error_css = "";
 $query = "SELECT * FROM customer WHERE customer_id='$username'";
 
 $result = mysqli_query($con, $query);
 $numResults = mysqli_num_rows($result);
-
-if($numResults == 1)
+if($conf_password!=$password)
+{
+	echo "<br><br><br><center><h1>Passwords don't match!</h1></center>";
+}
+else if($numResults == 1)
 {
 	echo "<br><br><br><center><h1>Username already taken!</h1></center>";
 }
 else
 {
+	$password = md5($password);
 	$query = "INSERT INTO customer VALUES ('$username', '$password', '$name', '$address')";
 	$query1 = "INSERT INTO c_phone_no VALUES ('$username','$phoneno1')";
 	

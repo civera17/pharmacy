@@ -39,6 +39,11 @@
 							<span class="focus-input100"></span>
 						</div>
 						<br>
+						<div class="wrap-input100 validate-input" data-validate = "Please enter password again">
+							<input class="input100" type="password" name="conf_password" placeholder="Confirm Password">
+							<span class="focus-input100"></span>
+						</div>
+						<br>
 						<!-- Username: <input name = "username" placeholder = "username" required><br><br> -->
 						<!-- Password: <input name = "password" type = "password" placeholder = "Password" required><br><br> -->
 						<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter you Address">
@@ -61,6 +66,7 @@
 							Sign Up
 						</button>
 					</div>
+					<br>
 			<!-- <button type = "submit">Submit</button> -->
 			<!-- <button type="reset" value="Reset">Reset</button> -->
 		</form>
