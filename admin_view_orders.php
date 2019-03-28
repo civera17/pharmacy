@@ -22,13 +22,13 @@ else{
 	<table border ="2">
 		<thead>
 			<tr>
-				<th width=10%>Order_id</th>
-				<th width=20%>Date</th>
-				<th width=10%>Customer ID</th>
-				<th width=20%>Customer name</th>
-				<th width=10%>Agent ID</th>
-				<th width=20%>Agent name</th>
-				<th width=20%>Bill</th>
+				<th width=10% style="text-align:center;">Order_id</th>
+				<th width=20% style="text-align:center;">Date</th>
+				<th width=10% style="text-align:center;">Customer ID</th>
+				<th width=20% style="text-align:center;">Customer name</th>
+				<th width=10% style="text-align:center;">Agent ID</th>
+				<th width=20% style="text-align:center;">Agent name</th>
+				<th width=20% style="text-align:center;">Bill</th>
 			</tr>
 		</thead>
 		<tbody>
