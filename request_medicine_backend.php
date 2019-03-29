@@ -17,6 +17,6 @@ else{
 	mysqli_query($con,$insert_query);
 	echo "<script type='text/javascript'>";
 	echo "alert('Request placed!'); ";
-	echo "window.location.href = 'customer_home.html';";
+	echo "window.location.href = 'customer_home.php';";
 	echo "</script>";
 }

@@ -62,7 +62,7 @@
 	}
 	echo "<script type='text/javascript'>";
 	echo "alert('Order placed!'); ";
-	echo "window.location.href = 'customer_home.html';";
+	echo "window.location.href = 'customer_home.php';";
 	echo "</script>";
 	
 ?>	
