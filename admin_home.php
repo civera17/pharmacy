@@ -1,3 +1,12 @@
+<?php
+    require_once 'dbconnect.php';
+    session_start();
+    if(!isset($_SESSION['username']))
+    {
+        header('location:login.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -161,6 +170,7 @@
 			<br><br>
 			<div class="heading">
 					Welcome Adminstrator
+					<button onclick="location.href='logout.php'" type="button" name="logout" style="font-size:18px;position: absolute; top: 5%; left: 90%;">Logout</button>
 			</div><br><br>
 			<div class="background">
 					<!-- <img src="1.JPG" height="200px" width="200px"> -->
