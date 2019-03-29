@@ -68,11 +68,12 @@
 							</table>
 						</div>
 					</div>
-					<div class="container-login100-form-btn">
-						<button class = "login100-form-btn" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
+					<div>
+						<button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
 					</div>
-					<div class="container-login100-form-btn">
-						<button class = "login100-form-btn" onclick="location.href='request_medicine.php'" type="button" name="Request New Medicine">Request New Medicine </button>
+					<br>
+					<div>
+						<button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" class = "login100-form-btn" onclick="location.href='request_medicine.php'" type="button" name="Request New Medicine">Request New Medicine </button>
 					</div>
 				</div>
 			</div>
