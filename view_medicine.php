@@ -68,7 +68,12 @@
 							</table>
 						</div>
 					</div>
-					<button type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
+					<div class="container-login100-form-btn">
+						<button class = "login100-form-btn" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
+					</div>
+					<div class="container-login100-form-btn">
+						<button class = "login100-form-btn" onclick="location.href='request_medicine.php'" type="button" name="Request New Medicine">Request New Medicine </button>
+					</div>
 				</div>
 			</div>
 		</center>
