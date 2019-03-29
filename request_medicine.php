@@ -12,27 +12,34 @@
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/util_form.css">
+	<link rel="stylesheet" type="text/css" href="css/main_form.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
 </head>
 <body>
 	<center>
-		<div class="limiter">
-		<div class="container-login100">
+		<div class="container-contact100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="request_medicine_backend.php" method="POST">
-					<span class="login100-form-title">
+				<form class="contact100-form validate-form" action="request_medicine_backend.php" method="POST">
+					<span class="contact100-form-title">
 						Request Medicine
 					</span>
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-							<input class="input100" type="text" name="medicine_name" placeholder="Medicine Name">
-							<span class="focus-input100"></span>
+
+
+					<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Medicine Name is required">
+						<span class="label-input100">Medicine Name</span>
+						<input class="input100" type="text" name="name" placeholder="Enter medicine name">
+						<span class="focus-input100"></span>
 					</div>
-					<div class="container-login100-form-btn">
-							<button class="login100-form-btn">
-								Submit
-							</button>
-					</div>
+					<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
 			</form>
 		</div>
 	</div>
