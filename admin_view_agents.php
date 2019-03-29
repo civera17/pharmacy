@@ -6,11 +6,12 @@ $dbpass = "PASSWORD";
 $dbname = "DB_NAME";
 $con = mysqli_connect($host,$user,$dbpass,$dbname);
 */
+// agent_id	name	salary	address
 
 session_start();
 require_once 'dbconnect.php';
 
-$selectSQL = "SELECT * FROM supplier";
+$selectSQL = "SELECT * FROM delivery_agent";
 if( !( $selectRes = mysqli_query($con, $selectSQL ) ) )
 {
 	echo 'Retrieval of data from Database Failed - #'.mysqli_errno().': '.mysqli_error();
@@ -19,7 +20,7 @@ else{
 ?>
 <!DOCTYPE html>
 <head>
-	<title>View Suppliers</title>
+	<title>View Agents</title>
 	<!--< link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -35,9 +36,10 @@ else{
 <table border="2">
 	<thead>
 	    <tr>
-	    	<th width=20% style="text-align:center;">Supplier Id</th>
-	       	<th width=30% style="text-align:center;">Name</th>
-	       	<th width=40% style="text-align:center;">Address</th>
+	    	<th width=10% style="text-align:center;">Agent Id</th>
+	       	<th width=20% style="text-align:center;">Name</th>
+	       	<th width=20% style="text-align: center;">Salary</th>
+	       	<th width=35% style="text-align:center;">Address</th>
 	       	<th width=10% style="text-align:center;">Edit</th>
 	      	<th width=10% style="text-align:center;">Delete</th>
 	    </tr>
@@ -46,12 +48,12 @@ else{
 	    <?php
 	      	if( mysqli_num_rows( $selectRes )==0 )
 	      	{
-	        	echo '<tr><td colspan="5">No Rows Returned</td></tr>';
+	        	echo '<tr><td colspan="6">No Rows Returned</td></tr>';
 	      	}
 	      	else
 	      	{
 	        	while( $row = mysqli_fetch_assoc( $selectRes ) ){
-	          	echo "<tr><td>{$row['supplier_id']}</td><td>{$row['name']}</td><td>{$row['address']}</td>";
+	          	echo "<tr><td>{$row['agent_id']}</td><td>{$row['name']}</td><td>{$row['salary']}</td><td>{$row['address']}</td>";
 	          	echo "<td align='center'><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\"><button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" formaction=\"/edit_row.php\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td>";
 		    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\" formaction=\"/admin_delete_row.php\"><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
 	          	echo "</tr>\n";
@@ -61,7 +63,7 @@ else{
 	</tbody> 
 </table>
 <br><br>
-<button type = "button" value="add_supplier">Add supplier</button>
+<button type = "button" value="add_agent">Add supplier</button>
 </center>
 </body>
 <?php
