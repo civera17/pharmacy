@@ -195,7 +195,7 @@
             </a>
           </div>
           <div class="col-md-6 box">
-            <a class="portfolio-item" href="/ftp/inbound/login/">
+            <a class="portfolio-item" href="customer_view_orders.php">
               <span class="caption">
                 <span class="caption-content">
                   <h2 style="font-size: 1.7em;" style="font-family: FontinBold">View your orders</h2>

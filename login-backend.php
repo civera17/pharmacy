@@ -15,6 +15,7 @@ function getAddress() {
 
 if($username == 'admin' && $password1 == 'admin')
 {
+	$_SESSION['username'] = 'admin';
 	$url= getAddress();
 	$scheme = parse_url($url, PHP_URL_SCHEME);
 	$user = parse_url($url, PHP_URL_USER);
