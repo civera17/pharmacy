@@ -10,7 +10,7 @@
 		session_start();
 		$username = $_SESSION["username"];
 		require_once 'dbconnect.php';
-		$query = "SELECT requests.medicine_id as medicine_id
+		$query = "SELECT medicine_name
 				  FROM requests
 				  WHERE customer_id = $username";
 		$query_result = mysqli_query($con, $query);
@@ -18,7 +18,7 @@
 	<h3>Your medicine requests</h3>
 	<table border="2">
 		<tr>
-			<th> Medicine ID</th>
+			<th> Medicine Name</th>
 		</tr>
 		<?php
 			while($row = mysqli_fetch_array($query_result))
