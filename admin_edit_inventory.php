@@ -19,12 +19,12 @@
 	$shelf_no = $_GET["shelf_no"];
 
 	echo '<input type="hidden" name="identifier" value="1">';
-	echo 'Inventory ID: <input type="text" name="inventory_id" value="'.$inventory_id.'" readonly><br>';
-	echo 'Medicine ID: <input type="text" name="medicine_id" value="'.$medicine_id.'"><br>';
-	echo 'Quantity: <input type="text" name="quantity" value="'.$quantity.'"><br>';
-	echo 'Manufacture Date: <input type="text" name="manufacture_date" value="'.$manufacture_date.'"><br>';
-	echo 'Expiry Date: <input type="text" name="expiry_date" value="'.$expiry_date.'"><br>';
-	echo 'Shelf No: <input type="text" name="shelf_no" value="'.$shelf_no.'"><br>';
+	echo 'Inventory ID: <input type="text" name="inventory_id1" value="'.$inventory_id.'" readonly><br>';
+	echo 'Medicine ID: <input type="text" name="medicine_id1" placeholder="'.$medicine_id.'"><br>';
+	echo 'Quantity: <input type="text" name="quantity1" placeholder="'.$quantity.'"><br>';
+	echo 'Manufacture Date: <input type="text" name="manufacture_date1" placeholder="'.$manufacture_date.'"><br>';
+	echo 'Expiry Date: <input type="text" name="expiry_date1" placeholder="'.$expiry_date.'"><br>';
+	echo 'Shelf No: <input type="text" name="shelf_no1" placeholder="'.$shelf_no.'"><br>';
 
 	echo '<button type="submit">Edit</button>';
 	?>

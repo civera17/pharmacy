@@ -26,12 +26,12 @@ if($identifier==0)
 else if($identifier==1)
 {
 
-	$inventory_id = $_GET["inventory_id"];
-	$medicine_id = $_GET["medicine_id"];
-	$quantity = $_GET["quantity"];
-	$manufacture_date = $_GET["manufacture_date"];
-	$expiry_date = $_GET["expiry_date"];
-	$shelf_no = $_GET["shelf_no"];
+	$inventory_id = $_GET["inventory_id1"];
+	$medicine_id = $_GET["medicine_id1"];
+	$quantity = $_GET["quantity1"];
+	$manufacture_date = $_GET["manufacture_date1"];
+	$expiry_date = $_GET["expiry_date1"];
+	$shelf_no = $_GET["shelf_no1"];
 
 	if($medicine_id!='')
 	{
@@ -49,14 +49,14 @@ else if($identifier==1)
 	}
 	if($manufacture_date!='')
 	{
-		$query = "UPDATE inventory SET manufacture_date=STR_TO_DATE('$manufacture_date','%Y,%m,%d') WHERE inventory_id='$inventory_id'";
+		$query = "UPDATE inventory SET manufacture_date=(DATE '$manufacture_date') WHERE inventory_id='$inventory_id'";
 		$result = mysqli_query($con, $query);
 		mysqli_error($con);
 
 	}
 	if($expiry_date!='')
 	{
-		$query = "UPDATE inventory SET expiry_date=STR_TO_DATE('$expiry_date','%Y,%m,%d') WHERE inventory_id='$inventory_id'";
+		$query = "UPDATE inventory SET expiry_date= DATE '$expiry_date' WHERE inventory_id='$inventory_id'";
 		$result = mysqli_query($con, $query);
 		mysqli_error($con);
 
@@ -80,7 +80,7 @@ else if($identifier==1)
 	$pass = parse_url($url, PHP_URL_PASS);
 	$host = parse_url($url, PHP_URL_HOST);
 	$port = parse_url($url, PHP_URL_PORT);
-	 // header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/admin_view_inventory.php");
+	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/admin_view_inventory.php");
 
 }
 else if($identifier==2)

@@ -65,6 +65,7 @@ else
 
 						echo "<td align='center'><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\">
 							<form action=\"admin_edit_inventory.php\" method=\"get\">
+							
 							<input type='hidden' name='identifier' value='1'>
 							<input type='hidden' name='inventory_id' value='".$row['inventory_id']."'>
 							<input type='hidden' name='medicine_id' value='".$row['m_id']."'>
