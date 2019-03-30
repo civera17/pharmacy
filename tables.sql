@@ -75,7 +75,8 @@ medicine_id int NOT NULL,
 quantity int NOT NULL,
 manufacture_date date NOT NULL, 
 expiry_date date NOT NULL, 
-shelf_no int NOT NULL
+shelf_no int NOT NULL,
+FOREIGN KEY (medicine_id) REFERENCES medicine(medicine_id)
 );
 
 
