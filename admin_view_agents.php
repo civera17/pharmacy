@@ -21,7 +21,6 @@ else{
 <!DOCTYPE html>
 <head>
 	<title>View Agents</title>
-	<!--< link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -32,7 +31,7 @@ else{
 </head>
 <body style="margin:5%;padding:0">
 <center>
-<h3>SUPPLIERS</h3>
+<h3>DELIVERY AGENTS</h3>
 <table border="2">
 	<thead>
 	    <tr>
@@ -54,8 +53,24 @@ else{
 	      	{
 	        	while( $row = mysqli_fetch_assoc( $selectRes ) ){
 	          	echo "<tr><td>{$row['agent_id']}</td><td>{$row['name']}</td><td>{$row['salary']}</td><td>{$row['address']}</td>";
-	          	echo "<td align='center'><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\"><button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" formaction=\"/edit_row.php\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td>";
-		    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\" formaction=\"/admin_delete_row.php\"><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
+	          	echo "<td align='center'><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\">
+	          		<form action=\"admin_edit_agent.php\" method=\"get\">
+					<input type='hidden' name='identifier' value='1'>
+					<input type='hidden' name='agent_id' value='".$row['agent_id']."'>
+					<input type='hidden' name='name' value='".$row['name']."'>
+					<input type='hidden' name='salary' value='".$row['salary']."'>
+					<input type='hidden' name='address' value='".$row['address']."'>
+	          	  	<button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\">
+	          		<span class=\"glyphicon glyphicon-pencil\">
+	          		</span></button></form></p></td>";
+		    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\">
+		    	<form action=\"admin_view_agent_backend.php\" method=\"get\">
+		    		<input type='hidden' name='identifier' value='0'>
+		    		<input type='hidden' name='agent_id' value='".$row['agent_id']."'>
+		    		<button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\" >
+		    		<span class=\"glyphicon glyphicon-trash\">
+		    		</span></button></form></p></td>";
+		    	echo "";
 	          	echo "</tr>\n";
 	        }
 	      }
@@ -63,7 +78,7 @@ else{
 	</tbody> 
 </table>
 <br><br>
-<button type = "button" value="add_agent">Add supplier</button>
+<button onclick = "location.href='admin_add_agent.php'" type="button" value="add_agent">Add Agent</button>
 </center>
 </body>
 <?php

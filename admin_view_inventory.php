@@ -61,8 +61,28 @@ else
 						<td>{$row['manufacture_date']}</td>
 						<td>{$row['expiry_date']}</td>
 						<td>{$row['shelf_no']}</td>";
-						echo "<td align='center'><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\"><button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" formaction=\"/edit_row.php\" ><span class=\"glyphicon glyphicon-pencil\"></span></button></p></td>";
-				    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\" formaction=\"/admin_delete_row.php\"><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
+						// Inventory ID	Medicine ID	Name	Quantity	Manufacture Date	Expiry Date	Shelf No.	Edit	Delete
+
+						echo "<td align='center'><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\">
+							<form action=\"admin_edit_inventory.php\" method=\"get\">
+							<input type='hidden' name='identifier' value='1'>
+							<input type='hidden' name='inventory_id' value='".$row['inventory_id']."'>
+							<input type='hidden' name='medicine_id' value='".$row['m_id']."'>
+							<input type='hidden' name='quantity' value='".$row['quantity']."'>
+							<input type='hidden' name='manufacture_date' value='".$row['manufacture_date']."'>
+							<input type='hidden' name='expiry_date' value='".$row['expiry_date']."'>
+							<input type='hidden' name='shelf_no' value='".$row['shelf_no']."'>
+							<button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" >
+							<span class=\"glyphicon glyphicon-pencil\">
+							</span>
+							</button>
+							</form>
+							</p></td>";
+				    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\">
+				    		<form action=\"admin_view_inventory_backend.php\" method=\"get\">
+							<input type='hidden' name='identifier' value='0'>
+							<input type='hidden' name='inventory_id' value='".$row['inventory_id']."'>
+				    		<button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\"><span class=\"glyphicon glyphicon-trash\"></span></button></p></td>";
 						echo "</tr>\n";
 
 					}
@@ -74,7 +94,7 @@ else
 
 </table>
 <br>
-<button type="button" value="Add">Add to inventory</button>
+<button onclick="location.href='admin_add_inventory.php'" type="button" value="Add">Add to inventory</button>
 </center>
 <?php
 }
