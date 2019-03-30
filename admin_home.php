@@ -183,7 +183,7 @@
 						<a class="portfolio-item" href="view_medicine.php">
 							<span class="caption">
 								<span class="caption-content">
-									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Medicine</h2>
+									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Medicine Information</h2>
 								</span>
 							</span>
 							<img class="img-fluid" src="images/portfolio-4.jpg" alt="">
@@ -194,7 +194,7 @@
 						<a class="portfolio-item" href="admin_view_orders.php">
 							<span class="caption">
 								<span class="caption-content">
-									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View orders</h2>
+									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View customer orders</h2>
 								</span>
 							</span>
 							<img class="img-fluid" src="images/view_orders.jpg" alt="">
@@ -254,7 +254,7 @@
 							<span class="caption">
 								<span class="caption-content">
 									<!-- <p class="mb-0" style="font-family: Fontin;">I am an</p> -->
-									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View pending requests</h2>
+									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View pending requests to suppliers</h2>
 								</span>
 							</span>
 							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
@@ -266,7 +266,7 @@
 							<span class="caption">
 								<span class="caption-content">
 									<!-- <p class="mb-0" style="font-family: Fontin;">I am an</p> -->
-									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View medicine requests</h2>
+									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View customer medicine requests</h2>
 								</span>
 							</span>
 							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
