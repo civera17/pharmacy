@@ -202,7 +202,7 @@
 					</div>
 
 					<div class="col-md-6 box">
-						<a class="portfolio-item" href="customer_update_info.php">
+						<a class="portfolio-item" href="admin_view_supplier.php">
 							<span class="caption">
 								<span class="caption-content">
 									<!-- <p class="mb-0" style="font-family: Fontin;">I am a</p> -->
