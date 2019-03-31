@@ -28,7 +28,10 @@ if($conf_password!=$password)
 }
 else if($numResults == 1)
 {
-	echo "<br><br><br><center><h1>Username already taken!</h1></center>";
+	echo "<script type='text/javascript'>";
+	echo "alert('Username already taken!'); ";
+	echo "window.location.href = 'signup.php';";
+	echo "</script>";
 }
 else
 {
@@ -45,6 +48,7 @@ else
 	}
 
 	echo "<br><br><br><center><h1>Successfully registered $name ! </h1></center>";
+	sleep(4);
+	header("Location:login.php");
 }
-
 ?>
