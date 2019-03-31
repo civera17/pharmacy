@@ -9,6 +9,7 @@ $url= getAddress();
 // Add new supplier
 if($identifier==1)
 {
+	printf("Here in 1\n");
 	$name = $_GET['name'];
 	$address = $_GET['address'];
 	$supplier_id_query = "SELECT max(supplier_id) as max_supplier_id from supplier";
@@ -24,9 +25,16 @@ if($identifier==1)
 		$row = mysqli_fetch_array($supplier_id_res);
 		$supplier_id = $row['max_supplier_id']+1;
 	}
-	$supplier_insert_query = "INSERT INTO supplier values($supplier_id,'$name','$address')";
+	$supplier_insert_query = "INSERT INTO supplier values($supplier_id,'".urlencode($name)."','".urlencode($address)."')";
 	mysqli_query($con,$supplier_insert_query);
-	// mysqli_error($con);
+	$selected = $_GET['selected'];
+	$N = count($selected);
+	foreach($selected as $selected_val)
+	{
+		$insert_produces_query = "INSERT INTO produces values($supplier_id,$selected_val)";
+		mysqli_query($con,$insert_produces_query);
+	}
+	mysqli_error($con);
 	$scheme = parse_url($url, PHP_URL_SCHEME);
 	$user = parse_url($url, PHP_URL_USER);
 	$pass = parse_url($url, PHP_URL_PASS);
