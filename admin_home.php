@@ -180,7 +180,7 @@
 				<div class="row no-gutters">
 
 					<div class="col-md-6 box">
-						<a class="portfolio-item" href="view_medicine.php">
+						<a class="portfolio-item" href="admin_view_medicine.php">
 							<span class="caption">
 								<span class="caption-content">
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Medicine Information</h2>
