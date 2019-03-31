@@ -51,31 +51,28 @@ else{
 	      	else
 	      	{
 	        	while( $row = mysqli_fetch_assoc( $selectRes ) ){
-	          	echo "<tr><td>{$row['supplier_id']}</td><td>{$row['name']}</td><td>{$row['address']}</td>";
-	          	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\">
-		          <form action=\"admin_edit_medicine.php\" method=\"get\">
-		          <input type='hidden' name='identifier' value='1'>
-		          <input type='hidden' name='medicine_id' value='".$row['medicine_id']."'>
-		          <input type='hidden' name='name' value='".$row['name']."'>
-		          <input type='hidden' name='max_count' value='".$row['max_count']."'>
-		          <input type='hidden' name='min_count' value='".$row['min_count']."'>
-		          <input type='hidden' name='cost' value='".$row['cost']."'>
+		          	echo "<tr><td>".urldecode($row['supplier_id'])."</td><td>".urldecode($row['name'])."</td><td>".urldecode($row['address'])."</td>";
+		          	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Edit\">
+			          <form action=\"admin_edit_supplier.php\" method=\"get\">
+			          <input type='hidden' name='identifier' value='2'>
+			          <input type='hidden' name='supplier_id' value='".$row['supplier_id']."'>
+			          <input type='hidden' name='name' value='".urlencode($row['name'])."'>
+			          <input type='hidden' name='address' value='".urlencode($row['address'])."'>
+			          <button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" ><span class=\"glyphicon glyphicon-pencil\"></span>
+			          </button>
+			          </form>
+			          </p></td>";
 
-		          <button class=\"btn btn-primary btn-xs\" data-title=\"Edit\" data-toggle=\"modal\" data-target=\"edit\" ><span class=\"glyphicon glyphicon-pencil\"></span>
-		          </button>
-		          </form>
-		          </p></td>";
-		          
-		    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><form action=\"admin_view_supplier_backend.php\" method=\"get\">
-		          <input type='hidden' name='identifier' value='0'>
-		          <input type='hidden' name='supplier_id' value='".$row['supplier_id']."'>
-		          <button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\" ><span class=\"glyphicon glyphicon-trash\"></span>
-		          </button>
-		          </form>
-		          </p></td>";
-	          	echo "</tr>\n";
-	        }
-	      }
+			    	echo "<td><p data-placement=\"top\" data-toggle=\"tooltip\" title=\"Delete\"><form action=\"admin_view_supplier_backend.php\" method=\"get\">
+			          <input type='hidden' name='identifier' value='0'>
+			          <input type='hidden' name='supplier_id' value='".$row['supplier_id']."'>
+			          <button class=\"btn btn-danger btn-xs\" data-title=\"Delete\" data-toggle=\"modal\" data-target=\"delete\" ><span class=\"glyphicon glyphicon-trash\"></span>
+			          </button>
+			          </form>
+			          </p></td>";
+		          	echo "</tr>\n";
+		        }
+	      	}
 	    ?>
 	</tbody> 
 </table>

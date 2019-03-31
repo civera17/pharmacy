@@ -6,6 +6,7 @@ function getAddress() {
     return $protocol.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 $url= getAddress();
+// Add new supplier
 if($identifier==1)
 {
 	$name = $_GET['name'];
@@ -33,6 +34,7 @@ if($identifier==1)
 	$port = parse_url($url, PHP_URL_PORT);
 	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/admin_view_supplier.php");
 }
+// Delete supplier
 else if($identifier == 0){
 	$supplier_id = $_GET['supplier_id'];
 	$query = "DELETE FROM supplier WHERE supplier_id = '$supplier_id'";
@@ -46,4 +48,23 @@ else if($identifier == 0){
 	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/admin_view_supplier.php");
 }
 
+// Edit supplier
+else if($identifier == 2){
+	$supplier_id = $_GET['supplier_id'];
+	$name = $_GET['name1'];
+	$address = $_GET['address'];
+	if($name!=''){
+		$query = "UPDATE supplier SET name = '".urlencode($name)."' WHERE supplier_id = '$supplier_id'";
+		mysqli_query($con,$query);
+	}
+	if($address != ''){
+		$query = "UPDATE supplier SET address = '".urlencode($address)."' WHERE supplier_id = '$supplier_id'";
+		mysqli_query($con,$query);
+		printf(mysqli_error($con));
+	}
+	// echo "<script type='text/javascript'>";
+	// echo "alert('Details Updated!'); ";
+	// echo "window.location.href = 'admin_view_supplier.php';";
+	// echo "</script>";
+}
 ?>
