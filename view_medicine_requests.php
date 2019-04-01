@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Your medicine requests</title>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
-<body>
+<body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover"  >
+<!-- background-color:#edb6aa;"  -->
+<!-- /*#99e5e8; #efd7ed"*/ -->
 <center>
+<h1 style="font-size: 35px"><b> Your medicine requests </b></h1><br><br>
 	<?php
 		session_start();
 		$username = $_SESSION["username"];
@@ -16,8 +19,10 @@
 		$query_result = mysqli_query($con, $query);
 		printf(mysqli_error($con));
 	?> 
-	<h3>Your medicine requests</h3>
-	<table border="2">
+	<!-- <h3>Your medicine requests</h3> -->
+
+
+	<table border="2" style="background-color:white ; font-size: 20px">
 		<tr>
 			<th> Medicine Name</th>
 		</tr>
