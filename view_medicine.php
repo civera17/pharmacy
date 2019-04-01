@@ -26,9 +26,9 @@
 		<!-- /*#99e5e8; #efd7ed"*/ -->
 		<center>
 		<h1 style="font-size: 40px"><b> MEDICINE </b></h1><br><br>
-						<table border="2" style="background-color: white ; font-size: 20px">
+						<table border="2" style="background-color: white ;text-align: center; font-size: 20px">
 								<thead>
-									<tr class="row100 head">
+									<tr>
 										<th style="text-align: center; font-size:20px"> ID </th>
 										<th style="text-align: center; font-size:20px" > Name </th>
 										<th style="text-align: center; font-size:20px"> Cost </th>
@@ -37,15 +37,15 @@
 										<th style="text-align: center;font-size:20px" > Choose quantity </th>
 									</tr>
 								</thead>
-						</table>
+						<!-- </table> -->
 					</div>
-					<div class="table100-body js-pscroll">
-						<table>
+					<!-- <div class="table100-body js-pscroll"> -->
+						<!-- <table border="2" style="background-color: white ; font-size: 20px"> -->
 							<tbody>
 								<form action="confirm_booking.php" method="POST" id='view_medicine'>
 							<?php
 								while ($row = mysqli_fetch_array($query_result)){
-									echo "<tr class='row100 body'>";
+									// echo "<tr class='row100 body'>";
 									echo "<td>".$row['id']."</td>";
 									echo "<td>".$row['name']."</td>";
 									echo "<td>".$row['cost']."</td>";
@@ -61,7 +61,7 @@
 						</table>
 
 					<button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
-				</div>
+				<!-- </div> -->
 				<br>
 				<div>
 					<button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" class = "login100-form-btn" onclick="location.href='request_medicine.php'" type="button" name="Request New Medicine">Request New Medicine </button>
