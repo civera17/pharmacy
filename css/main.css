@@ -175,7 +175,12 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background-color: #fff;
+  /*background-color: #fff;*/
+  background-image: url('images/BeFunky-photo.jpg'); 
+ height: 100px; 
+ background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 
 .wrap-login100 {
