@@ -45,6 +45,10 @@ body{
   -o-box-shadow: 0 10px 30px 0px rgba(255, 255, 255, 0.5);
   -ms-box-shadow: 0 10px 30px 0px rgba(255, 255, 255, 0.5);
 }
-.table100.ver2 .table100-body tr {
+/*.table100.ver2 .table100-body tr {
   background-color: #eee;
+}
+*/
+.table100.ver1 th{
+  background-color: #57b846;
 }

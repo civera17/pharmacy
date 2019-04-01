@@ -11,7 +11,7 @@
 	session_start();
 	require_once 'dbconnect.php';
 	$username = $_SESSION['username'];
-	$query = "SELECT order_id,order_date,delivery_agent.name as a_name,bill FROM orders,delivery_agent WHERE orders.agent_id=delivery_agent.agent_id and orders.customer_id='$username'";
+	$query = 'SELECT order_id,order_date,delivery_agent.name as a_name,bill FROM orders,delivery_agent WHERE orders.agent_id=delivery_agent.agent_id and orders.customer_id="'.$username.'"';
 	if(!($selectRes = mysqli_query($con,$query)))
 	{
 		echo 'retrieval of data from datbase failed -#'.mysqli_errno().':'.mysqli_error();

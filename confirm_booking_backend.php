@@ -32,6 +32,7 @@
 	$agent_id = $row['agent_id'];
 	$curr_date = date('y/m/d',time());
 	$insert_query = "INSERT INTO orders VALUES ('$order_id','$username','$agent_id','$curr_date','$total_cost')";
+	mysqli_error($con);
 	mysqli_query($con,$insert_query);
 	foreach($chosen as $chosen_val)
 	{
