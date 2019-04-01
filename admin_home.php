@@ -258,7 +258,7 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View pending requests to suppliers</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
+							<img class="img-fluid" src="images/pending_requests.png" alt="">
 						</a>
 					</div>
 
