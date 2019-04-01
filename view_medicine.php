@@ -60,11 +60,28 @@
 							</tbody>
 						</table>
 
-					<button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
+					<!-- <button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button> -->
+					<br>
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" form="view_medicine">
+						<span>
+							Place Order
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
 				<!-- </div> -->
 				<br>
 				<div>
-					<button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" class = "login100-form-btn" onclick="location.href='request_medicine.php'" type="button" name="Request New Medicine">Request New Medicine </button>
+					<!-- <button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" class = "login100-form-btn" onclick="location.href='request_medicine.php'" type="button" name="Request New Medicine">Request New Medicine </button> -->
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" onclick="location.href='request_medicine.php'">
+						<span>
+							Request New Medicine
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
 				</div>
 			</div>
 		</div>

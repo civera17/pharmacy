@@ -23,22 +23,26 @@
 		$row = mysqli_fetch_array($order_id_res);
 		$order_id = $row['max_order_id']+1;
 	}
-	$agent_id_query = 'SELECT agent_id, delivery_count from (SELECT delivery_agent.agent_id, count(orders.order_id) as delivery_count from delivery_agent LEFT JOIN orders ON delivery_agent.agent_id = orders.agent_id GROUP BY agent_id) as agent_order_count HAVING delivery_count = min(delivery_count) LIMIT 1';
+	$agent_id_query = 'SELECT agent_id, delivery_count FROM ( SELECT delivery_agent.agent_id, COUNT(orders.order_id) AS delivery_count FROM delivery_agent LEFT JOIN orders ON delivery_agent.agent_id = orders.agent_id GROUP BY agent_id ) AS agent_order_count ORDER BY delivery_count LIMIT 1';
 	$result = mysqli_query($con,$agent_id_query);
+	printf(mysqli_error($con));
 	if(!$result){
 		printf(mysqli_error($con));
 	}
+	// echo "here";
 	$row = mysqli_fetch_array($result);
 	$agent_id = $row['agent_id'];
+	printf($agent_id);
 	$curr_date = date('y/m/d',time());
 	$insert_query = "INSERT INTO orders VALUES ('$order_id','$username','$agent_id','$curr_date','$total_cost')";
-	mysqli_error($con);
 	mysqli_query($con,$insert_query);
+	printf(mysqli_error($con));
 	foreach($chosen as $chosen_val)
 	{
 		$med_quant = $_POST['orderquantity'.$chosen_val];
 		$insert_query = "INSERT INTO contains VALUES('$order_id','$chosen_val','$med_quant')";
 		mysqli_query($con,$insert_query);
+		printf(mysqli_error($con));
 		$done = 0;
 		$inv_query = "SELECT medicine_id,quantity,inventory_id FROM inventory WHERE medicine_id = '$chosen_val' ORDER BY expiry_date";
 		$result = mysqli_query($con,$inv_query);
@@ -61,9 +65,9 @@
 			}
 		}
 	}
-	echo "<script type='text/javascript'>";
-	echo "alert('Order placed!'); ";
-	echo "window.location.href = 'customer_home.php';";
-	echo "</script>";
+	// echo "<script type='text/javascript'>";
+	// echo "alert('Order placed!'); ";
+	// echo "window.location.href = 'customer_home.php';";
+	// echo "</script>";
 	
 ?>	
