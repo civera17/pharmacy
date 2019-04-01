@@ -250,7 +250,7 @@
 						</a>
 					</div>
 
-					<div class="col-md-6 box">
+					<div class="col-md-6 box" style="background-color: #fff">
 						<a class="portfolio-item" href="admin_view_pending_requests.php">
 							<span class="caption">
 								<span class="caption-content">
