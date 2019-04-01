@@ -26,7 +26,7 @@
 		<h3> Medicines </h3>
 		<div class="container-table100">
 			<div class="wrap-table100">
-				<div class="table100 ver2 m-b-110">
+				<div class="table100 ver1 m-b-110">
 					<div class="table100-head">
 						<table border="2">
 								<thead>
@@ -36,7 +36,7 @@
 										<th style="text-align: center;" class="cell100 column2"> Cost </th>
 										<th style="text-align: center;" class="cell100 column2"> Available quantity </th>
 										<th style="text-align: center;" class="cell100 column2"> Add to cart </th>
-										<th style="text-align: center;" class="cell100 column4"> Choose quantity </th>
+										<th style="text-align: center;" class="cell100 column4" > Choose quantity </th>
 									</tr>
 								</thead>
 						</table>
@@ -53,8 +53,8 @@
 									echo "<td style='text-align: center' class='cell100 column2'>".$row['cost']."</td>";
 									echo "<td style='text-align: center' class='cell100 column2'>".$row['quantity']."</td>";
 									$row_quant = $row['quantity'];
-									echo "<td class='cell100 column2'><input type='checkbox' name='addtocart[]' value='$row[id]' style='margin-left: 50%'></td>";
-									echo "<td style='text-align: center' class='cell100 column2'><input type='number' name='orderquantity".$row['id']."' max='$row_quant'></td>";
+									echo "<td class='cell100 column2'><input type='checkbox' name='addtocart[]' value='$row[id]' style='margin-left: 50% '></td>";
+									echo "<td style='text-align: center;' class='cell100 column2'><input style='border: 2px solid #cdcdcd; border-color: rgba(0, 0, 0, .14); background-color:#aeefb2; font-size: 14px; font-weight: bold; text-align:center' type='number' name='orderquantity".$row['id']."' max='$row_quant'></td>";
 									echo "</tr>";
 								}
 							?>
