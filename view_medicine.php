@@ -29,12 +29,12 @@
 						<table border="2" style="background-color: white ; font-size: 20px">
 								<thead>
 									<tr class="row100 head">
-										<th style="text-align: center;" class="cell100 column2"> ID </th>
-										<th style="text-align: center;" class="cell100 column1"> Name </th>
-										<th style="text-align: center;" class="cell100 column2"> Cost </th>
-										<th style="text-align: center;" class="cell100 column2"> Available quantity </th>
-										<th style="text-align: center;" class="cell100 column2"> Add to cart </th>
-										<th style="text-align: center;" class="cell100 column4" > Choose quantity </th>
+										<th style="text-align: center; font-size:20px"> ID </th>
+										<th style="text-align: center; font-size:20px" > Name </th>
+										<th style="text-align: center; font-size:20px"> Cost </th>
+										<th style="text-align: center; font-size:20px" > Available quantity </th>
+										<th style="text-align: center; font-size:20px"> Add to cart </th>
+										<th style="text-align: center;font-size:20px" > Choose quantity </th>
 									</tr>
 								</thead>
 						</table>
