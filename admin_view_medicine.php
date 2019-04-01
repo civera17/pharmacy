@@ -19,9 +19,44 @@ else{
 ?>
 <!DOCTYPE html>
 <head>
+	<style>
+	.button {
+	  padding: 15px 25px;
+	  /*padding-bottom: 2px;*/
+	  font-size: 15px;
+	  text-align: center;
+	  cursor: pointer;
+	  outline: none;
+	  color: #fff;
+	  height:px;
+	  background-color: #484949;
+	  /*#4CAF50;*/
+	  border: none;
+	  border-radius: 15px;
+	  box-shadow: 0 4px #999;
+	}
 
+	.button:hover {background-color: #3e8e41}
+
+	.button:active {
+	  background-color: #3e8e41;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
+	</style>
 	<title>View Medicines</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!--Include the above in your HEAD tag -->
@@ -29,23 +64,25 @@ else{
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 </head>
-<body style="margin:5%;padding:0" background="med.jpg" background-size=cover>
+<body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover"  >
+<!-- background-color:#edb6aa;"  -->
+<!-- /*#99e5e8; #efd7ed"*/ -->
 <center>
-<h3>MEDICINES</h3>
-<table border="2">
+<h1 style="font-size: 45px"><b>MEDICINES</b></h1><br><br>
+<table border="2" style="background-color:white ; font-size: 20px">
 	<thead>
 	    <tr>
 	    	<!-- <input type="checkbox" id="checkall" /></th> -->
-	    	<th width=10% style="text-align:center;">Medicine Id</th>
-	       	<th width=25% style="text-align:center;">Name</th>
-	       	<th width=10% style="text-align:center;">Max Count</th>
-	     	<th width=10% style="text-align:center;">Min Count</th>
-	      	<th width=15% style="text-align:center;">Cost</th>
-	      	<th width=10% style="text-align:center;">Edit</th>
-	      	<th width=10% style="text-align:center;">Delete</th>
+	    	<th width=10% style="text-align:center; font-size:25px">Medicine Id</th>
+	       	<th width=25% style="text-align:center; font-size:25px">Name</th>
+	       	<th width=10% style="text-align:center; font-size:25px">Max Count</th>
+	     	<th width=10% style="text-align:center; font-size:25px">Min Count</th>
+	      	<th width=15% style="text-align:center; font-size:25px">Cost</th>
+	      	<th width=10% style="text-align:center; font-size:25px">Edit</th>
+	      	<th width=10% style="text-align:center; font-size:25px">Delete</th>
 	    </tr>
 	</thead>
-	<tbody style="text-align:center;">
+	<tbody style="text-align:center;  border-radius:5px">
 	    <?php
 	      	if( mysqli_num_rows( $selectRes )==0 )
 	      	{
@@ -87,19 +124,9 @@ else{
 	</tbody> 
 </table>
 <br>
-<div class="clearfix"></div>
-<ul class="pagination pull-right">
-  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-  <li class="active"><a href="#">1</a></li>
- <!--  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li> --> 
-  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-</ul>
+<div class="container-login100-form-btn">
+<button style="width: 20%; font-size: 20px" class="login100-form-btn" onclick = "location.href='admin_add_medicine.php'" type="button" name="Add medicine">Add medicine</button>
 </div>
-
-<button onclick = "location.href='admin_add_medicine.php'" type="button" name="Add medicine">Add medicine</button>
 
 
 <!-- <button type = "button" value="add_medicine">Add medicine</button>
