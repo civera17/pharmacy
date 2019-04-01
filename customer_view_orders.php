@@ -6,7 +6,6 @@
 </head>
 <body>
 <center>
-	<h3>View your Orders</h3>
 	<?php
 	session_start();
 	require_once 'dbconnect.php';
@@ -18,13 +17,18 @@
 	}
 	else{
 	?>
-		<table border ="2">
+		<body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover"  >
+		<!-- background-color:#edb6aa;"  -->
+		<!-- /*#99e5e8; #efd7ed"*/ -->
+		<center>
+		<h1 style="font-size: 40px"><b> VIEW YOUR ORDERS </b></h1><br><br>
+		<table border ="2" style="background-color: white ; font-size: 20px">
 			<thead>
 				<tr>
-					<th width=10% style="text-align:center;">Order_id</th>
-					<th width=20% style="text-align:center;">Date</th>
-					<th width=20% style="text-align:center;">Agent name</th>
-					<th width=20% style="text-align:center;">Bill</th>
+					<th width=10% style="text-align:center; font-size:20px">Order_id</th>
+					<th width=20% style="text-align:center; font-size:20px">Date</th>
+					<th width=20% style="text-align:center; font-size:20px">Agent name</th>
+					<th width=20% style="text-align:center; font-size:20px">Bill</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -50,6 +54,10 @@
 			</tbody>
 			<br>
 			<br>
+		</table>
+	</center>
+			</body>
+
 
 </table>
 </center>
