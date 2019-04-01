@@ -234,7 +234,7 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Inventory</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
+							<img class="img-fluid" src="images/inventory.jpg" alt="">
 						</a>
 					</div>
 
