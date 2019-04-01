@@ -19,31 +19,6 @@ else{
 ?>
 <!DOCTYPE html>
 <head>
-	<style>
-	.button {
-	  padding: 15px 25px;
-	  /*padding-bottom: 2px;*/
-	  font-size: 15px;
-	  text-align: center;
-	  cursor: pointer;
-	  outline: none;
-	  color: #fff;
-	  height:px;
-	  background-color: #484949;
-	  /*#4CAF50;*/
-	  border: none;
-	  border-radius: 15px;
-	  box-shadow: 0 4px #999;
-	}
-
-	.button:hover {background-color: #3e8e41}
-
-	.button:active {
-	  background-color: #3e8e41;
-	  box-shadow: 0 5px #666;
-	  transform: translateY(4px);
-	}
-	</style>
 	<title>View Medicines</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">

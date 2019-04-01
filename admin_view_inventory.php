@@ -17,8 +17,18 @@ else
 <!DOCTYPE html>
 <head>
 	<title>View inventory</title>
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!--Include the above in your HEAD tag -->
@@ -26,21 +36,21 @@ else
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover">
 <center>
-	<h3>INVENTORY</h3>
-	<table border="2">
+	<h1 style="font-size: 45px"><b>INVENTORY</b></h1><br><br>
+	<table border="2" style="background-color:white ; font-size: 20px">
 		<thead>
 			<tr>
-				<th width=10% style="text-align:center;">Inventory ID</th>
-				<th width=10% style="text-align:center;">Medicine ID</th>
-				<th width=15% style="text-align:center;">Name</th>
-				<th width=10% style="text-align:center;">Quantity</th>
-				<th width=15% style="text-align:center;">Manufacture Date</th>
-				<th width=15% style="text-align:center;">Expiry Date</th>
-				<th width=10% style="text-align:center;">Shelf No.</th>
-				<th width=10% style="text-align:center;">Edit</th>
-	      		<th width=10% style="text-align:center;">Delete</th>
+				<th width=10% style="text-align:center; font-size:20px">Inventory ID</th>
+				<th width=10% style="text-align:center; font-size:20px">Medicine ID</th>
+				<th width=15% style="text-align:center; font-size:20px">Name</th>
+				<th width=10% style="text-align:center; font-size:20px">Quantity</th>
+				<th width=15% style="text-align:center; font-size:20px">Manufacture Date</th>
+				<th width=15% style="text-align:center; font-size:20px">Expiry Date</th>
+				<th width=10% style="text-align:center; font-size:20px">Shelf No.</th>
+				<th width=10% style="text-align:center; font-size:20px">Edit</th>
+	      		<th width=10% style="text-align:center; font-size:20px">Delete</th>
 			</tr>
 		</thead>
 		<tbody  style="text-align:center;">
@@ -95,8 +105,11 @@ else
 
 </table>
 <br>
-<button onclick="location.href='admin_add_inventory.php'" type="button" value="Add">Add to inventory</button>
+<div class="container-login100-form-btn">
+<button style="width: 20%; font-size: 20px" class="login100-form-btn"  onclick="location.href='admin_add_inventory.php'" type="button" value="Add">Add to inventory</button>
+</div>
 </center>
+</body>
 <?php
 }
 ?>
