@@ -12,8 +12,9 @@
 		require_once 'dbconnect.php';
 		$query = "SELECT medicine_name
 				  FROM requests
-				  WHERE customer_id = $username";
+				  WHERE customer_id = '$username'";
 		$query_result = mysqli_query($con, $query);
+		printf(mysqli_error($con));
 	?> 
 	<h3>Your medicine requests</h3>
 	<table border="2">
@@ -24,7 +25,7 @@
 			while($row = mysqli_fetch_array($query_result))
 			{
 				echo "<tr>";
-				echo "<td>".$row['medicine_id']."</td>";
+				echo "<td>".$row['medicine_name']."</td>";
 				echo "</tr>";
 			}
 		?>
