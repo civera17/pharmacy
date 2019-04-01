@@ -14,24 +14,47 @@ else{
 <!DOCTYPE html>
 <head>
 	<title>View Orders</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!--Include the above in your HEAD tag -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover" >
 <center>
-	<h3>ORDERS</h3>
-	<table border ="2">
+	<h1 style="font-size: 45px"><b>ORDERS</b></h1><br><br>
+	<table border ="2" style="background-color:white ; font-size: 20px">
 		<thead>
 			<tr>
-				<th width=10% style="text-align:center;">Order_id</th>
-				<th width=20% style="text-align:center;">Date</th>
-				<th width=10% style="text-align:center;">Customer ID</th>
-				<th width=20% style="text-align:center;">Customer name</th>
-				<th width=10% style="text-align:center;">Agent ID</th>
-				<th width=20% style="text-align:center;">Agent name</th>
-				<th width=20% style="text-align:center;">Bill</th>
+				<th width=10% style="text-align:center; font-size:25px;">Order_id</th>
+				<th width=20% style="text-align:center;
+				font-size:25px">Date</th>
+				<th width=10% style="text-align:center;
+				font-size:25px">Customer ID</th>
+				<th width=20% style="text-align:center;
+				font-size:25px">Customer name</th>
+				<th width=10% style="text-align:center;
+				font-size:25px">Agent ID</th>
+				<th width=20% style="text-align:center;
+				font-size:25px">Agent name</th>
+				<th width=20% style="text-align:center;
+				font-size:25px">Bill</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody style="text-align:center;  border-radius:5px">
 			<?php
 				if(mysqli_num_rows($selectRes)==0)
 				{
