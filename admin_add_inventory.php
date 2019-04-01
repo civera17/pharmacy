@@ -72,13 +72,13 @@
 	</div>
 	<!-- <button type="submit">Add inventory</button>; -->
 	<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn" style="margin-left: 45%">
-						<span>
-							Submit
-							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-						</span>
-					</button>
-					</div>
+		<button class="contact100-form-btn" style="margin-left: 45%">
+			<span>
+				Submit
+				<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+			</span>
+		</button>
+	</div>
 </form>
 </div>
 </div>
