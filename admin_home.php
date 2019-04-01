@@ -209,11 +209,11 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View suppliers</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-4.jpg" alt="">
+							<img class="img-fluid" src="images/suppliers.jpg" alt="">
 						</a>
 					</div>
 
-					<div class="col-md-6 box">
+					<div class="col-md-6 box" style="overflow: hidden; ">
 						<a class="portfolio-item" href="admin_view_agents.php">
 							<span class="caption">
 								<span class="caption-content">
@@ -221,8 +221,9 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Delivery Agents</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
+							<img class="img-fluid" src="images/agents.jpg" alt="">
 						</a>
+						<!-- style=" object-fit: cover;" height=100% width=100%  -->
 					</div>
 
 					<div class="col-md-6 box">

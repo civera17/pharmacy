@@ -29,7 +29,7 @@ else{
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 </head>
-<body style="margin:5%;padding:0">
+<body style="margin:5%;padding:0; background-color: #abdaec">
 <center>
 <h3>DELIVERY AGENTS</h3>
 <table border="2">

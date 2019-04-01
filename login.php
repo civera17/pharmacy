@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body background="images/BeFunky-photo.jpg" style="background-image: url('images/BeFunky-photo.jpg'); 
-													background-color: #cccccc; 
+													/*background-color: #cccccc; */
 													 height: 500px; 
 													 background-position: center;
 													  background-repeat: no-repeat; 
