@@ -21,14 +21,12 @@
 	<link rel="stylesheet" type="text/css" href="css/main_table.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
-<body style="margin:5%;padding:0" background-size=cover>
-	<center>
-		<h3> Medicines </h3>
-		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100 ver1 m-b-110">
-					<div class="table100-head">
-						<table border="2">
+<body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover"  >
+		<!-- background-color:#edb6aa;"  -->
+		<!-- /*#99e5e8; #efd7ed"*/ -->
+		<center>
+		<h1 style="font-size: 40px"><b> MEDICINE </b></h1><br><br>
+						<table border="2" style="background-color: white ; font-size: 20px">
 								<thead>
 									<tr class="row100 head">
 										<th style="text-align: center;" class="cell100 column2"> ID </th>
@@ -48,10 +46,10 @@
 							<?php
 								while ($row = mysqli_fetch_array($query_result)){
 									echo "<tr class='row100 body'>";
-									echo "<td style='text-align: center' class='cell100 column2'>".$row['id']."</td>";
-									echo "<td style='text-align: center' class='cell100 column1'>".$row['name']."</td>";
-									echo "<td style='text-align: center' class='cell100 column2'>".$row['cost']."</td>";
-									echo "<td style='text-align: center' class='cell100 column2'>".$row['quantity']."</td>";
+									echo "<td>".$row['id']."</td>";
+									echo "<td>".$row['name']."</td>";
+									echo "<td>".$row['cost']."</td>";
+									echo "<td>".$row['quantity']."</td>";
 									$row_quant = $row['quantity'];
 									echo "<td class='cell100 column2'><input type='checkbox' name='addtocart[]' value='$row[id]' style='margin-left: 50% '></td>";
 									echo "<td style='text-align: center;' class='cell100 column2'><input style='border: 2px solid #cdcdcd; border-color: rgba(0, 0, 0, .14); background-color:#aeefb2; font-size: 14px; font-weight: bold; text-align:center' type='number' name='orderquantity".$row['id']."' max='$row_quant'></td>";
@@ -61,9 +59,7 @@
 								</form>
 							</tbody>
 						</table>
-					</div>
-				</div>
-				<div>
+
 					<button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button>
 				</div>
 				<br>
