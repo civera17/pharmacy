@@ -174,7 +174,7 @@
 			</div><br><br>
 			<div class="background">
 					<!-- <img src="1.JPG" height="200px" width="200px"> -->
-					<img src="images/1.JPG">
+					<img src="images/admin_background.jpg">
 			</div>
 			<div class="container">
 				<div class="row no-gutters">
@@ -209,7 +209,7 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View suppliers</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/suppliers.jpg" alt="">
+							<img class="img-fluid" src="images/supplier_act.jpg" alt="">
 						</a>
 					</div>
 
@@ -234,7 +234,7 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Inventory</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
+							<img class="img-fluid" src="images/inventory.jpg" alt="">
 						</a>
 					</div>
 
@@ -246,7 +246,7 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View customers</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
+							<img class="img-fluid" src="images/customers.jpg" alt="">
 						</a>
 					</div>
 
