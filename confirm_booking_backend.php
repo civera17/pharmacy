@@ -32,7 +32,6 @@
 	// echo "here";
 	$row = mysqli_fetch_array($result);
 	$agent_id = $row['agent_id'];
-	printf($agent_id);
 	$curr_date = date('y/m/d',time());
 	$insert_query = "INSERT INTO orders VALUES ('$order_id','$username','$agent_id','$curr_date','$total_cost')";
 	mysqli_query($con,$insert_query);
@@ -65,9 +64,9 @@
 			}
 		}
 	}
-	// echo "<script type='text/javascript'>";
-	// echo "alert('Order placed!'); ";
-	// echo "window.location.href = 'customer_home.php';";
-	// echo "</script>";
+	echo "<script type='text/javascript'>";
+	echo "alert('Order placed!'); ";
+	echo "window.location.href = 'customer_home.php';";
+	echo "</script>";
 	
 ?>	
