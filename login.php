@@ -14,7 +14,12 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body background="images/BeFunky-photo.jpg" style="background-image: url('images/BeFunky-photo.jpg'); 
+													background-color: #cccccc; 
+													 height: 500px; 
+													 background-position: center;
+													  background-repeat: no-repeat; 
+													  background-size: cover;">
 <center>
 	
 <!-- <form action="login-backend.php" method="POST">
