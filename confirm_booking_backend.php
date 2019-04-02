@@ -26,14 +26,16 @@
 	$agent_id_query = 'SELECT agent_id, delivery_count FROM ( SELECT delivery_agent.agent_id, COUNT(orders.order_id) AS delivery_count FROM delivery_agent LEFT JOIN orders ON delivery_agent.agent_id = orders.agent_id GROUP BY agent_id ) AS agent_order_count ORDER BY delivery_count LIMIT 1';
 	$result = mysqli_query($con,$agent_id_query);
 	printf(mysqli_error($con));
-	if(!$result){
-		printf(mysqli_error($con));
+	if(mysqli_num_rows($result)==0){
+		// printf(mysqli_error($con));
 		echo "<script type='text/javascript'>";
 		echo "alert('Currently not taking orders!'); ";
 		echo "window.location.href = 'view_medicine.php';";
 		echo "</script>";
 	}
 	// echo "here";
+	else
+	{
 	$row = mysqli_fetch_array($result);
 	$agent_id = $row['agent_id'];
 	$curr_date = date('y/m/d',time());
@@ -72,5 +74,6 @@
 	echo "alert('Order placed!'); ";
 	echo "window.location.href = 'customer_home.php';";
 	echo "</script>";
+}
 	
 ?>	
