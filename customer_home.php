@@ -287,7 +287,7 @@ function carousel() {
               <img class="img-fluid" src="images/view_orders.jpg" alt="">
             </a>
           </div>
-          <div class="col-md-6 box" style="background-color: skyblue">
+          <div class="col-md-6 box" >
             <a class="portfolio-item" href="customer_update_info.php">
               <span class="caption">
                 <span class="caption-content">
