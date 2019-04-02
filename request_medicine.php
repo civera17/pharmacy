@@ -40,10 +40,14 @@
 						</span>
 					</button>
 					</div>
-					<div class="container-login100-form-btn">
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="container-contact100-form-btn">
 					<button style="width: 20%; font-size: 15px ;
 					     margin-top: 1%;  margin-right: 1%;
-					     position:relative;" class="login100-form-btn" onclick = "location.href="customer_home.php'" type="button" name="Back">Back to home</button>
+					     position:relative;" class="contact100-form-btn" onclick = "location.href="customer_home.php'" type="button" name="Back">Back to home</button>
 					</div>
 			</form>
 		</div>
