@@ -18,14 +18,17 @@ if($password == $password1){
 		$password1 = md5($password1);
 		$query = "UPDATE customer SET password='$password', name = '$name', address = '$address'
 				WHERE customer_id='$username' AND '$password'='$password1'";
+		$result = mysqli_query($con, $query);
 	}
 	if($name!='')
 	{
 		$query = "UPDATE customer SET name = '$name' WHERE customer_id = '$username'";
+		$result = mysqli_query($con, $query);
 	}
 	if($address!='')
 	{
 		$query = "UPDATE customer SET address = '$address' WHERE customer_id = '$username'";
+		$result = mysqli_query($con, $query);
 	}
 	$result = mysqli_query($con, $query);
 

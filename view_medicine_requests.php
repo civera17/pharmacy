@@ -25,7 +25,7 @@
 	<table border="2" style="background-color:white ; font-size: 20px">
 		<tr>
 			<th> Medicine Name</th>
-			<th> Date </th>
+			<th> Request date</th>
 		</tr>
 		<?php
 			while($row = mysqli_fetch_array($query_result))
