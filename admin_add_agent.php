@@ -36,7 +36,7 @@
 				Add Delivery Agent
 			</span>
 	<form action="admin_view_agent_backend.php" method="GET">
-	<input type="hidden" name="identifier" value="2">;
+	<input type="hidden" name="identifier" value="2">
 	<!-- echo 'Agent ID:<input type="text" name="agent_id"><br>'; -->
 	<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Agent ID is required">
 		<!-- <span class="label-input100">Medicine ID</span> -->

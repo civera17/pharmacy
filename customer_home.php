@@ -293,7 +293,7 @@ function carousel() {
               <span class="caption">
                 <span class="caption-content">
                   <!-- <p class="mb-0" style="font-family: Fontin;">I am a</p> -->
-                  <h2 style="font-size: 1.7em;" style="font-family: FontinBold">Update your profile</h2>
+                  <h2 style="font-size: 1.7em;" style="font-family: FontinBold">View and Update Profile</h2>
                 </span>
               </span>
               <img class="img-fluid" src="images/profile_r.png" alt="">
