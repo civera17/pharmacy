@@ -35,12 +35,9 @@ if($identifier==1)
 		mysqli_query($con,$insert_produces_query);
 	}
 	mysqli_error($con);
-	$scheme = parse_url($url, PHP_URL_SCHEME);
-	$user = parse_url($url, PHP_URL_USER);
-	$pass = parse_url($url, PHP_URL_PASS);
-	$host = parse_url($url, PHP_URL_HOST);
-	$port = parse_url($url, PHP_URL_PORT);
-	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/admin_view_supplier.php");
+	echo "<script type='text/javascript'>";
+	echo "window.location.href = 'admin_view_supplier.php';";
+	echo "</script>";
 }
 // Delete supplier
 else if($identifier == 0){
@@ -48,12 +45,9 @@ else if($identifier == 0){
 	$query = "DELETE FROM supplier WHERE supplier_id = '$supplier_id'";
 	mysqli_query($con,$query);
 	printf(mysqli_error($con));
-	$scheme = parse_url($url, PHP_URL_SCHEME);
-	$user = parse_url($url, PHP_URL_USER);
-	$pass = parse_url($url, PHP_URL_PASS);
-	$host = parse_url($url, PHP_URL_HOST);
-	$port = parse_url($url, PHP_URL_PORT);
-	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/admin_view_supplier.php");
+	echo "<script type='text/javascript'>";
+	echo "window.location.href = 'admin_view_supplier.php';";
+	echo "</script>";
 }
 
 // Edit supplier
@@ -70,9 +64,9 @@ else if($identifier == 2){
 		mysqli_query($con,$query);
 		printf(mysqli_error($con));
 	}
-	// echo "<script type='text/javascript'>";
-	// echo "alert('Details Updated!'); ";
-	// echo "window.location.href = 'admin_view_supplier.php';";
-	// echo "</script>";
+	echo "<script type='text/javascript'>";
+	echo "alert('Details Updated!'); ";
+	echo "window.location.href = 'admin_view_supplier.php';";
+	echo "</script>";
 }
 ?>
