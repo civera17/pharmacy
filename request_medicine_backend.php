@@ -16,7 +16,7 @@ if($username == ''){
 	echo "</script>";
 }
 else{
-	$insert_query = "INSERT INTO requests VALUES('$username','$medicine_name')";
+	$insert_query = "INSERT INTO requests VALUES('$username','$medicine_name', NOW())";
 	mysqli_query($con,$insert_query);
 	printf(mysqli_error($con));
 	echo "<script type='text/javascript'>";
