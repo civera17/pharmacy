@@ -67,7 +67,6 @@
 		<span class="focus-input100"></span>
 	</div>
 	<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Shelf No. is required">
-<<<<<<< HEAD
 		<input class="input100" type="text" name="shelf_no" placeholder="Enter shelf number" required="
 	true">
 		<span class="focus-input100"></span>
