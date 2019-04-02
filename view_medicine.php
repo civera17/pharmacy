@@ -52,7 +52,7 @@
 									echo "<td>".$row['quantity']."</td>";
 									$row_quant = $row['quantity'];
 									echo "<td class='cell100 column2'><input type='checkbox' name='addtocart[]' value='$row[id]' style='margin-left: 50% '></td>";
-									echo "<td style='text-align: center;' class='cell100 column2'><input style='border: 2px solid #cdcdcd; border-color: rgba(0, 0, 0, .14); background-color:#aeefb2; font-size: 14px; font-weight: bold; text-align:center' type='number' name='orderquantity".$row['id']."' max='$row_quant'></td>";
+									echo "<td style='text-align: center;' class='cell100 column2'><input style='border: 2px solid #cdcdcd; border-color: rgba(0, 0, 0, .14); background-color:#aeefb2; font-size: 14px; font-weight: bold; text-align:center; width:100%' type='number' min='1' name='orderquantity".$row['id']."' max='$row_quant'></td>";
 									echo "</tr>";
 								}
 							?>

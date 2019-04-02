@@ -187,7 +187,7 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Medicine Information</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-4.jpg" alt="">
+							<img class="img-fluid" src="images/medicine_info.jpg" alt="">
 						</a>
 					</div>
 
@@ -271,7 +271,7 @@
 									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View customer medicine requests</h2>
 								</span>
 							</span>
-							<img class="img-fluid" src="images/portfolio-1.jpg" alt="">
+							<img class="img-fluid" src="images/requests.jpg" alt="">
 						</a>
 					</div>
 					<br><br>

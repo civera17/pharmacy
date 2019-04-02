@@ -249,7 +249,7 @@ function showDivs(n) {
                   <h2 style="font-size: 1.7em;" style="font-family: FontinBold">View Medicine and place order</h2>
                 </span>
               </span>
-              <img class="img-fluid" src="images/portfolio-4.jpg" alt="">
+              <img class="img-fluid" src="images/medicine_info.jpg" alt="">
             </a>
           </div>
           <div class="col-md-6 box">
@@ -262,7 +262,7 @@ function showDivs(n) {
               <img class="img-fluid" src="images/view_orders.jpg" alt="">
             </a>
           </div>
-          <div class="col-md-6 box">
+          <div class="col-md-6 box" style="background-color: skyblue">
             <a class="portfolio-item" href="customer_update_info.php">
               <span class="caption">
                 <span class="caption-content">
@@ -270,7 +270,7 @@ function showDivs(n) {
                   <h2 style="font-size: 1.7em;" style="font-family: FontinBold">Update your profile</h2>
                 </span>
               </span>
-              <img class="img-fluid" src="images/portfolio-4.jpg" alt="">
+              <img class="img-fluid" src="images/profile_r.png" alt="">
             </a>
           </div>
           <div class="col-md-6 box">
@@ -281,7 +281,7 @@ function showDivs(n) {
                   <h2 style="font-size: 1.7em;" style="font-family: FontinBold">View your medicine requests</h2>
                 </span>
               </span>
-              <img class="img-fluid" src="images/portfolio-1.jpg" alt="">
+              <img class="img-fluid" src="images/requests.jpg" alt="">
             </a>
           </div>
         </div>
