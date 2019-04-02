@@ -179,7 +179,7 @@
 
   <body  bgcolor="white">
 
-      <div class="heading" style="color: black">   
+      <div class="heading" style="color: white">   
         Welcome    
           <?php
             echo "$username";
@@ -187,6 +187,7 @@
       </div>
 
       <br>
+
 
    <!--  <div class="w3-container">
   <h2>Slideshow Indicators</h2>
@@ -263,7 +264,7 @@ function carousel() {
       <button onclick="location.href='logout.php'" type="button" name="logout" style="position: absolute; top: 5%; left: 90%;">Logout</button>
       <div class="background" style="width: 100% height:100%; background-color: white">
           <!-- <img src="1.JPG" height="200px" width="200px"> -->
-          <img src="images/cust_bk.jpg">
+          <img src="images/admin_background.jpg">
       </div>
       <div class="container">
         <div class="row no-gutters">
