@@ -41,7 +41,7 @@ else{
 </head>
 <body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover">
 <center>
-<h1 style="font-size: 45px"><b>MEDICINES</b></h1><br><br>
+<h1 style="font-size: 45px"><b>EXPIRED MEDICINES</b></h1><br><br>
 <table border="2" style="background-color:white ; font-size: 20px">
 	<thead>
 	    <tr>
