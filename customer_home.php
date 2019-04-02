@@ -177,7 +177,7 @@
 
   </head>
 
-  <body>
+  <body  bgcolor="white">
 
       <div class="heading" style="color: black">   
         Welcome    
@@ -186,14 +186,14 @@
           ?>
       </div>
 
-      <br><br>
+      <br>
 
    <!--  <div class="w3-container">
   <h2>Slideshow Indicators</h2>
   <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
 </div> -->
 
-<div class="w3-content w3-display-container" style="max-width:1400px">
+<!-- <div class="w3-content w3-display-container" style="max-width:1400px">
   <img class="mySlides" src="images/slide1.jpg" style="height:100%;width:100%">
   <img class="mySlides" src="images/slide2.jpg" style="height:100%;width:100%">
   <img class="mySlides" src="images/slide3.jpg" style="width:100%">
@@ -233,10 +233,35 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " w3-white";
 }
+</script> -->
+
+
+<div class="w3-content w3-section" style="max-width:1400px">
+  <img class="mySlides" src="images/slide1.jpg" style="width:100%">
+  <img class="mySlides" src="images/slide2.jpg" style="width:100%">
+  <img class="mySlides" src="images/slide3.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 </script>
 
+
       <button onclick="location.href='logout.php'" type="button" name="logout" style="position: absolute; top: 5%; left: 90%;">Logout</button>
-      <div class="background">
+      <div class="background" style="width: 100% height:100%; background-color: white">
           <!-- <img src="1.JPG" height="200px" width="200px"> -->
           <img src="images/cust_bk.jpg">
       </div>
