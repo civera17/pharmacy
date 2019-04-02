@@ -86,20 +86,15 @@ else{
 	</tbody> 
 </table>
 <br>
-<div class="clearfix"></div>
-<ul class="pagination pull-right">
-  <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-  <li class="active"><a href="#">1</a></li>
 
-  <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-</ul>
-</div>
-<br>
 <div class="container-login100-form-btn">
-<button style="width: 20%; font-size: 20px" class="login100-form-btn" onclick = "location.href='admin_add_pending_request.php'" type="button" name="Add pending request">Add pending request</button>
+<button style="width: 20%; font-size: 15px" class="login100-form-btn" onclick = "location.href='admin_add_pending_request.php'" type="button" name="Add pending request">Add pending request</button>
 </div>
-
-
+<div class="container-login100-form-btn">
+<button style="width: 20%; font-size: 15px ;
+     margin-top: 1%;  margin-right: 1%;
+     position:relative;" class="login100-form-btn" onclick = "location.href='admin_home.php'" type="button" name="Back">Back to home</button>
+</div>
 <!-- <button type = "button" value="add_medicine">Add medicine</button>
 <button type="button" value="del_medicine">Remove medicine</button> -->
 </center>
