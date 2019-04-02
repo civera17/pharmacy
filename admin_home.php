@@ -167,11 +167,12 @@
 	</head>
 
 	<body>
-			<br><br>
-			<div class="heading">
+			<br><br><br><br><br><br><br><br><br>
+			<div class="heading" style="font-size: 45px">
 					Welcome Adminstrator
 					<button onclick="location.href='logout.php'" type="button" name="logout" style="font-size:18px;position: absolute; top: 5%; left: 90%;">Logout</button>
-			</div><br><br>
+			</div>
+			<br><br><br><br><br><br><br><br><br>
 			<div class="background">
 					<!-- <img src="1.JPG" height="200px" width="200px"> -->
 					<img src="images/admin_background.jpg">
