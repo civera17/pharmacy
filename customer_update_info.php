@@ -71,13 +71,14 @@
 			</span>
 		</button>
 	</div>
-	</div>
+	<br>
+	<br>
 <div class="container-contact100-form-btn">
+</form>
 <button style="font-size: 15px ;margin-left: 45%"" class="contact100-form-btn" onclick = "location.href='customer_home.php'" type="button" name="Back">Back to home</button>
 </div>
-</form>
 </div>
-
+</div>
 </center>
 </body>
 </html>
