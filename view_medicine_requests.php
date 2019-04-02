@@ -13,7 +13,7 @@
 		session_start();
 		$username = $_SESSION["username"];
 		require_once 'dbconnect.php';
-		$query = "SELECT medicine_name
+		$query = "SELECT medicine_name, curr_date
 				  FROM requests
 				  WHERE customer_id = '$username'";
 		$query_result = mysqli_query($con, $query);
@@ -25,12 +25,14 @@
 	<table border="2" style="background-color:white ; font-size: 20px">
 		<tr>
 			<th> Medicine Name</th>
+			<th> Date </th>
 		</tr>
 		<?php
 			while($row = mysqli_fetch_array($query_result))
 			{
 				echo "<tr>";
 				echo "<td>".$row['medicine_name']."</td>";
+				echo "<td>".$row['curr_date']."</td>";
 				echo "</tr>";
 			}
 		?>

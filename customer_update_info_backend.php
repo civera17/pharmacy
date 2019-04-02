@@ -19,11 +19,11 @@ if($password == $password1){
 		$query = "UPDATE customer SET password='$password', name = '$name', address = '$address'
 				WHERE customer_id='$username' AND '$password'='$password1'";
 	}
-	else if($name!='')
+	if($name!='')
 	{
 		$query = "UPDATE customer SET name = '$name' WHERE customer_id = '$username'";
 	}
-	else if($address!='')
+	if($address!='')
 	{
 		$query = "UPDATE customer SET address = '$address' WHERE customer_id = '$username'";
 	}
