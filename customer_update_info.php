@@ -51,13 +51,13 @@
 	<!-- echo 'Enter new password: <input type="password" name="password"><br>'; -->
 	<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="password is required">
 		<!-- <span class="label-input100">Medicine ID</span> -->
-		<input class="input100" type="password" name="password" placeholder="Enter Password" required="true">
+		<input class="input100" type="password" name="password" placeholder="Enter Password">
 		<span class="focus-input100"></span>
 	</div>
 	<!-- echo 'Confirm password: <input type="password" name="password1"><br>'; -->
 	<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Confirm password is required">
 		<!-- <span class="label-input100">Medicine ID</span> -->
-		<input class="input100" type="password" name="password1" placeholder="Confirm Password" required="true">
+		<input class="input100" type="password" name="password1" placeholder="Confirm Password">
 		<span class="focus-input100"></span>
 	</div>
 	<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Address is required">
