@@ -70,11 +70,7 @@ else{
 	    ?>
 	</tbody> 
 </table>
-<br>
-<div class="container-login100-form-btn">
-<!-- <button style="width: 20%; font-size: 20px" class="login100-form-btn"  type = "reset" value="Reset">Reset</button> -->
-<button style="width: 20%; font-size: 20px" class="login100-form-btn" type="button" value="del_medicine">Remove medicine</button>
-</div>
+
 </center>
 </body>
 <?php

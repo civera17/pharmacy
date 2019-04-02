@@ -102,7 +102,10 @@ else{
 <div class="container-login100-form-btn">
 <button style="width: 20%; font-size: 20px" class="login100-form-btn" onclick = "location.href='admin_add_medicine.php'" type="button" name="Add medicine">Add medicine</button>
 </div>
-
+<br>
+<div class="container-login100-form-btn">
+<button style="width: 20%; font-size: 20px" class="login100-form-btn" onclick = "location.href='admin_view_expired.php'" type="button" name="View Expired Medicines">View Expired Medicines</button>
+</div>
 
 <!-- <button type = "button" value="add_medicine">Add medicine</button>
 <button type="button" value="del_medicine">Remove medicine</button> -->
