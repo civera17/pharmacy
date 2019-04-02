@@ -99,8 +99,21 @@ else{
 	</tbody> 
 </table>
 <br>
+<br>
 <div class="container-login100-form-btn">
-<button style="width: 20%; font-size: 20px" class="login100-form-btn" onclick = "location.href='admin_add_medicine.php'" type="button" name="Add medicine">Add medicine</button>
+<button style="width: 20%; font-size: 15px" class="login100-form-btn" onclick = "location.href='admin_add_medicine.php'" type="button" name="Add medicine">Add medicine</button>
+</div>
+
+<br>
+<div class="container-login100-form-btn">
+<button style="width: 20%; font-size: 15px" class="login100-form-btn" onclick = "location.href='admin_view_expired.php'" type="button" name="View Expired Medicines">View Expired Medicines</button>
+</div>
+
+
+<div class="container-login100-form-btn">
+<button style="width: 20%; font-size: 15px ;
+     margin-top: 1%;  margin-right: 1%;
+     position:relative;" class="login100-form-btn" onclick = "location.href='admin_home.php'" type="button" name="Back">Back to home</button>
 </div>
 
 
