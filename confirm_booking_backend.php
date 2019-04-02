@@ -28,6 +28,10 @@
 	printf(mysqli_error($con));
 	if(!$result){
 		printf(mysqli_error($con));
+		echo "<script type='text/javascript'>";
+		echo "alert('Currently not taking orders!'); ";
+		echo "window.location.href = 'view_medicine.php';";
+		echo "</script>";
 	}
 	// echo "here";
 	$row = mysqli_fetch_array($result);
