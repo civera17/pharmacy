@@ -68,10 +68,7 @@
 								<tbody>
 									<?php
 										require_once 'dbconnect.php';
-										$query = "SELECT medicine.medicine_id as id, medicine.name as name,	medicine.cost as cost, sum(inventory.quantity) as quantity
-													FROM medicine, inventory
-													WHERE medicine.medicine_id = inventory.medicine_id
-													GROUP BY medicine.medicine_id, medicine.name, medicine.cost";
+										$query = "SELECT medicine.medicine_id as id, medicine.name as name	  FROM medicine";
 										$query_result = mysqli_query($con,$query);
 										while ($row = mysqli_fetch_array($query_result)){
 											echo "<tr class='row100 body'>";
