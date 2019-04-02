@@ -20,6 +20,19 @@
 	<link rel="stylesheet" type="text/css" href="css/util_table.css">
 	<link rel="stylesheet" type="text/css" href="css/main_table.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!--Include the above in your HEAD tag -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 </head>
 <body style="margin:5%;padding:0; background-image:url('medicine.jpg'); background-repeat:no-repeat;background-size: cover"  >
 		<!-- background-color:#edb6aa;"  -->
@@ -81,6 +94,11 @@
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
 						</span>
 					</button>
+				</div>
+				<div class="container-contact100-form-btn">
+				<button style=" font-size: 15px ;
+				     margin-top: 1%;  margin-right: 1%;
+				     position:relative;" class="contact100-form-btn" onclick = "location.href='customer_home.php'" type="button" name="Back">Back to home <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i></button>
 				</div>
 				</div>
 			</div>

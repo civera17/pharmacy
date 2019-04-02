@@ -39,7 +39,16 @@
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
 						</span>
 					</button>
-				</div>
+					</div>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="container-contact100-form-btn">
+					<button style="width: 20%; font-size: 15px ;
+					     margin-top: 1%;  margin-right: 1%;
+					     position:relative;" class="contact100-form-btn" onclick = "location.href="customer_home.php'" type="button" name="Back">Back to home</button>
+					</div>
 			</form>
 		</div>
 	</div>

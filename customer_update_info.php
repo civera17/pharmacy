@@ -14,12 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="css/util_form.css">
 	<link rel="stylesheet" type="text/css" href="css/main_form.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="css/util_table.css">
 	<link rel="stylesheet" type="text/css" href="css/main_table.css">
@@ -77,9 +71,13 @@
 			</span>
 		</button>
 	</div>
+	</div>
+<div class="container-contact100-form-btn">
+<button style="font-size: 15px ;margin-left: 45%"" class="contact100-form-btn" onclick = "location.href='customer_home.php'" type="button" name="Back">Back to home</button>
+</div>
 </form>
 </div>
-</div>
+
 </center>
 </body>
 </html>
