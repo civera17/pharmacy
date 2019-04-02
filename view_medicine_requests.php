@@ -57,8 +57,9 @@
 	</table>
 	<br>
 </center>
-	<div class="container-login100-form-btn">
-	<button  style="font-size: 15px; width: 15%" class="login100-form-btn" onclick = "location.href='customer_home.php'" type="button" name="Back">Back to home</button>
+
+<div class="container-login100-form-btn">
+<button  style="font-size: 15px; width: 15%" class="login100-form-btn" onclick = "location.href='customer_home.php'" type="button" name="Back">Back to home</button>
 </div>	
 </body>
 </html>
