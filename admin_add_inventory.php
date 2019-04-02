@@ -37,6 +37,7 @@
 			</span>
 	<form action= "admin_view_inventory_backend.php" method="GET">
 		<input type="hidden" name="identifier" value="2">
+	
 	<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Medicine Id is required">
 		<!-- <span class="label-input100">Medicine ID</span> -->
 		<input class="input100" type="text" name="medicine_id" placeholder="Enter Medicine id" required="true">
@@ -66,7 +67,8 @@
 		<span class="focus-input100"></span>
 	</div>
 	<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Shelf No. is required">
-		<input class="input100" type="text" name="shelf_no" placeholder="Enter Medicine id" required="
+<<<<<<< HEAD
+		<input class="input100" type="text" name="shelf_no" placeholder="Enter shelf number" required="
 	true">
 		<span class="focus-input100"></span>
 	</div>
