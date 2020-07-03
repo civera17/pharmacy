@@ -35,20 +35,19 @@ else if($numResults == 1)
 }
 else
 {
-	$password = md5($password);
+//	$password = md5($password);
 	$query = "INSERT INTO customer VALUES ('$username', '$password', '$name', '$address')";
 	$query1 = "INSERT INTO c_phone_no VALUES ('$username','$phoneno1')";
-	
-	mysqli_query($con, $query);
+
 	mysqli_query($con,$query1);
+	mysqli_query($con,$query);
 	if(!empty($phoneno2))
 	{
 		$query2 = "INSERT INTO c_phone_no VALUES ('$username','$phoneno2')";
 		mysqli_query($con,$query2);
 	}
-
 	echo "<br><br><br><center><h1>Successfully registered $name ! </h1></center>";
-	sleep(4);
-	header("Location:login.php");
+	sleep(3);
+	echo "window.location.href = 'signup.php';";
 }
 ?>

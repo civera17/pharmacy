@@ -21,6 +21,6 @@ else{
 	printf(mysqli_error($con));
 	echo "<script type='text/javascript'>";
 	echo "alert('Request placed!'); ";
-	echo "window.location.href = 'customer_home.php';";
+	echo "window.location.href = 'viewMedicine.php';";
 	echo "</script>";
 }

@@ -6,7 +6,7 @@ session_start();
 $username = $_POST["username"];
 $password1 = $_POST["password"];
 
-$password = md5($password1);
+$password = ($password1);
 
 function getAddress() {
     $protocol = $_SERVER['HTTPS'] == 'on' ? 'https' : 'http';
@@ -42,7 +42,7 @@ else
 		$pass = parse_url($url, PHP_URL_PASS);
 		$host = parse_url($url, PHP_URL_HOST);
 		$port = parse_url($url, PHP_URL_PORT);
-		header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/customer_home.php");
+		header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/customerHome.php");
 	}
 	else
 	{

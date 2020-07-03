@@ -144,6 +144,7 @@
 
 				body {
 						overflow-x: hidden;
+                        background-color: #00aa88;
 				}
 
 				.heading {
@@ -173,10 +174,10 @@
 					<button onclick="location.href='logout.php'" type="button" name="logout" style="font-size:18px;position: absolute; top: 5%; left: 90%;">Logout</button>
 			</div>
 			<br><br><br><br><br><br><br><br><br>
-			<div class="background">
-					<!-- <img src="1.JPG" height="200px" width="200px"> -->
-					<img src="images/admin_background.jpg">
-			</div>
+<!--			<div class="background">-->
+<!--
+<!--					<img src="images/admin_background.jpg">-->
+<!--			</div>-->
 			<div class="container">
 				<div class="row no-gutters">
 
@@ -260,18 +261,6 @@
 								</span>
 							</span>
 							<img class="img-fluid" src="images/pending_requests.png" alt="">
-						</a>
-					</div>
-
-					<div class="col-md-6 box">
-						<a class="portfolio-item" href="admin_view_medicine_requests.php">
-							<span class="caption">
-								<span class="caption-content">
-									<!-- <p class="mb-0" style="font-family: Fontin;">I am an</p> -->
-									<h2 style="font-size: 1.7em;" style="font-family: FontinBold">View customer medicine requests</h2>
-								</span>
-							</span>
-							<img class="img-fluid" src="images/requests.jpg" alt="">
 						</a>
 					</div>
 					<br><br>

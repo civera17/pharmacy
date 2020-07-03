@@ -11,7 +11,7 @@
 		require_once 'dbconnect.php';
 		if(empty($_POST['addtocart'])){
 			echo "<h1> Nothing chosen! </h1>";
-			echo "<script> alert('Nothing chosen!');window.location.href = 'view_medicine.php'; </script>";
+			echo "<script> alert('Nothing chosen!');window.location.href = 'viewMedicine.php'; </script>";
 		}
 		else{
 			$chosen = $_POST['addtocart'];

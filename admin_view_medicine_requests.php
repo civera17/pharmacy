@@ -4,9 +4,9 @@ session_start();
 require_once 'dbconnect.php';
 
 $selectSQL = "SELECT customer.customer_id as customer_id,customer.name as name,medicine_name FROM customer, requests WHERE customer.customer_id=requests.customer_id ";
-if(!($selectRes = mysqli_query($con,$selectSQL)))
+if( !( $selectRes = mysqli_query($con, $selectSQL ) ) )
 {
-	echo 'retrieval of data from database failed -#'.mysqli_errno().':'.mysqli_error();
+    echo 'Retrieval of data from Database Failed - #'.mysqli_errno().': '.mysqli_error();
 }
 else{
 ?>

@@ -38,7 +38,7 @@ if($password == $password1){
 	$pass = parse_url($url, PHP_URL_PASS);
 	$host = parse_url($url, PHP_URL_HOST);
 	$port = parse_url($url, PHP_URL_PORT);
-	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/customer_home.php");
+	header("Location: ".$scheme."://".$user.":".$pass."@".$host.":".$port."/MediKart/customerUpdateInfo.php");
 }
 else
 {

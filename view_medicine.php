@@ -72,7 +72,6 @@
 								</form>
 							</tbody>
 						</table>
-
 					<!-- <button style="padding: 5px 16px; border: 2px solid black; border-radius: 10px; color: black; font-size: 15px; font-style: bold" type='submit' form='view_medicine' name='Place Order' value = 'Place Order' align='bottom'> Place Order </button> -->
 					<br>
 				<div class="container-contact100-form-btn">
